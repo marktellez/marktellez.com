@@ -1,0 +1,12 @@
+{
+  "company": "Uber",
+  "role": "Database Engineer (Contract)",
+  "from": "2015",
+  "to": "2015",
+  "highlights": [
+    "Wrote PostgreSQL migration scripts",
+    "Facilitated transition to SchemalessDB (MongoDB) and MySQL",
+    "Developed data translation pipelines",
+    "Ensured smooth data migration between different database systems"
+  ]
+}

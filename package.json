@@ -4,20 +4,26 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "build": "next build && npm run build:sitemap",
+    "build:sitemap": "node scripts/build-sitemap.js",
+    "build:resume": "node scripts/build-resume.js",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@tailwindcss/line-clamp": "^0.4.4",
+    "@tailwindcss/typography": "^0.5.16",
+    "glob": "^11.0.1",
+    "next": "15.2.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "next": "15.2.4"
+    "nodemailer": "^6.9.16"
   },
   "devDependencies": {
+    "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.2.4",
-    "@eslint/eslintrc": "^3"
+    "tailwindcss": "^4"
   }
 }

@@ -1,0 +1,273 @@
+{
+  "skills": [
+    {
+      "category": "Tools",
+      "name": "Unity",
+      "slug": "unity",
+      "url": "/i-know/unity"
+    },
+    {
+      "category": "Web Development",
+      "name": "Tailwind Css",
+      "slug": "tailwind-css",
+      "url": "/i-know/tailwind-css"
+    },
+    {
+      "category": "AI & Machine Learning",
+      "name": "Supervised Learning",
+      "slug": "supervised-learning",
+      "url": "/i-know/supervised-learning"
+    },
+    {
+      "category": "AI & Machine Learning",
+      "name": "Reinforcement Learning",
+      "slug": "reinforcement-learning",
+      "url": "/i-know/reinforcement-learning"
+    },
+    {
+      "category": "Web Development",
+      "name": "React.js",
+      "slug": "react-js",
+      "url": "/i-know/react-js"
+    },
+    {
+      "category": "AI & Machine Learning",
+      "name": "Pytorch",
+      "slug": "pytorch",
+      "url": "/i-know/pytorch"
+    },
+    {
+      "category": "Web Development",
+      "name": "Python",
+      "slug": "python",
+      "url": "/i-know/python"
+    },
+    {
+      "category": "Databases",
+      "name": "Postgresql",
+      "slug": "postgresql",
+      "url": "/i-know/postgresql"
+    },
+    {
+      "category": "Databases",
+      "name": "Pinecone",
+      "slug": "pinecone",
+      "url": "/i-know/pinecone"
+    },
+    {
+      "category": "Tools",
+      "name": "Photoshop",
+      "slug": "photoshop",
+      "url": "/i-know/photoshop"
+    },
+    {
+      "category": "Web Development",
+      "name": "Next.js",
+      "slug": "next-js",
+      "url": "/i-know/next-js"
+    },
+    {
+      "category": "Databases",
+      "name": "Mysql",
+      "slug": "mysql",
+      "url": "/i-know/mysql"
+    },
+    {
+      "category": "Databases",
+      "name": "Mongodb",
+      "slug": "mongodb",
+      "url": "/i-know/mongodb"
+    },
+    {
+      "category": "Web Development",
+      "name": "Javascript",
+      "slug": "javascript",
+      "url": "/i-know/javascript"
+    },
+    {
+      "category": "Tools",
+      "name": "Cursor",
+      "slug": "cursor",
+      "url": "/i-know/cursor"
+    },
+    {
+      "category": "Web Development",
+      "name": "Aws S3",
+      "slug": "aws-s3",
+      "url": "/i-know/aws-s3"
+    },
+    {
+      "category": "Web Development",
+      "name": "Aws Lambda",
+      "slug": "aws-lambda",
+      "url": "/i-know/aws-lambda"
+    },
+    {
+      "category": "AI & Machine Learning",
+      "name": "Agentic Tools",
+      "slug": "agentic-tools",
+      "url": "/i-know/agentic-tools"
+    },
+    {
+      "category": "Tools",
+      "name": "Ableton Live",
+      "slug": "ableton-live",
+      "url": "/i-know/ableton-live"
+    }
+  ],
+  "companies": [
+    {
+      "from": "2024",
+      "to": "2025",
+      "company": "Zooly AI",
+      "title": "Sr. Web Developer & Voice Synthesis Lead",
+      "highlights": [
+        "Led voice synthesis teams building sophisticated voice models",
+        "Developed specialized 'tuning' system for ElevenLabs integration",
+        "Created feedback loop system for continuous model improvement",
+        "Leveraged React, JavaScript, TailwindCSS, and AWS services",
+        "Built and trained voice models for high-profile celebrities"
+      ],
+      "url": "/companies-ive-worked-for/zooly-ai"
+    },
+    {
+      "from": "2006",
+      "to": "2006",
+      "company": "YouTube",
+      "title": "Software Engineer (Contract)",
+      "highlights": [
+        "Contributed to development of original comment system",
+        "Built on open source Bulletin Board framework",
+        "Wrote PERL and Ruby scripts",
+        "Developed systems to handle rapidly growing user engagement"
+      ],
+      "url": "/companies-ive-worked-for/youtube"
+    },
+    {
+      "from": "2003",
+      "to": "2003",
+      "company": "X",
+      "title": "Software Engineer (Contract)",
+      "highlights": [
+        "Built pre-PayPal payment processing system using PERL",
+        "Worked 60+ hour weeks in high-intensity startup environment",
+        "Gained valuable lessons about startup culture",
+        "Experienced the ephemeral nature of software projects"
+      ],
+      "url": "/companies-ive-worked-for/x"
+    },
+    {
+      "from": "",
+      "to": "Present",
+      "company": "Various Startups",
+      "title": "",
+      "highlights": [],
+      "url": "/companies-ive-worked-for/various-startups"
+    },
+    {
+      "from": "2003",
+      "to": "2004",
+      "company": "UpperDeck",
+      "title": "Software Engineer",
+      "highlights": [
+        "Built online companion for Marvel Vs card game",
+        "Worked with mixed tech stack of ASP.NET, PERL, and PostgreSQL",
+        "First professional experience with PostgreSQL",
+        "Enhanced physical card game with digital tools"
+      ],
+      "url": "/companies-ive-worked-for/upperdeck"
+    },
+    {
+      "from": "2015",
+      "to": "2015",
+      "company": "Uber",
+      "title": "Database Engineer (Contract)",
+      "highlights": [
+        "Wrote PostgreSQL migration scripts",
+        "Facilitated transition to SchemalessDB (MongoDB) and MySQL",
+        "Developed data translation pipelines",
+        "Ensured smooth data migration between different database systems"
+      ],
+      "url": "/companies-ive-worked-for/uber"
+    },
+    {
+      "from": "2016",
+      "to": "2020",
+      "company": "ReactU YouTube",
+      "title": "Creator & Educator",
+      "highlights": [
+        "Created YouTube channel teaching JavaScript, ReactJS, NextJS, and MongoDB",
+        "Grew channel to 33,000 subscribers",
+        "Generated approximately $7,000 monthly in revenue",
+        "Operated from Mexico City"
+      ],
+      "url": "/companies-ive-worked-for/reactu-youtube"
+    },
+    {
+      "from": "2001",
+      "to": "2003",
+      "company": "Intel",
+      "title": "Jr. Software Engineer",
+      "highlights": [
+        "Built pioneering edge sports streaming service for NHL and NBA",
+        "Developed streaming media components for edge devices",
+        "Published four technical articles with WroxPress",
+        "Worked with early streaming media technologies"
+      ],
+      "url": "/companies-ive-worked-for/intel"
+    },
+    {
+      "from": "2005",
+      "to": "2005",
+      "company": "GEICO",
+      "title": "Backend Software Engineer (Contract)",
+      "highlights": [
+        "Developed SOAP interfaces between modern systems and legacy COBOL infrastructure",
+        "Created Ruby automation scripts to streamline interface development",
+        "Worked with DB2 and legacy database systems",
+        "Bridged gap between web services and mainframe systems"
+      ],
+      "url": "/companies-ive-worked-for/geico"
+    },
+    {
+      "from": "2020",
+      "to": "2022",
+      "company": "DevmentorLive",
+      "title": "Founder & Consultant",
+      "highlights": [
+        "Founded consulting company specializing in ReactJS, TypeScript, NextJS, and MongoDB",
+        "Conducted medical AI research in Mexico with X-rays and diagnostic models",
+        "Developed Text-To-Speech model using GANs and Transformer architectures",
+        "Built escape room booking application and other client projects",
+        "Balanced tech work with building sustainable rural lifestyle"
+      ],
+      "url": "/companies-ive-worked-for/devmentor-live"
+    },
+    {
+      "from": "2017",
+      "to": "2020",
+      "company": "Codementor",
+      "title": "Senior Mentor & Developer",
+      "highlights": [
+        "Helped thousands of students, developers, and companies",
+        "Specialized in Ruby on Rails, ReactJS, and JavaScript",
+        "Accumulated almost 500 five-star reviews",
+        "Worked directly with clients on development projects"
+      ],
+      "url": "/companies-ive-worked-for/codementor"
+    },
+    {
+      "from": "2004",
+      "to": "2005",
+      "company": "Callaway Golf",
+      "title": "ASP.NET Developer",
+      "highlights": [
+        "Built e-commerce platform for online store",
+        "Integrated merchant account services with backend systems",
+        "Managed extensive catalog of golfing products",
+        "Worked with ASP.NET technology"
+      ],
+      "url": "/companies-ive-worked-for/callaway-golf"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+[
+
+  {
+    "content": "I've used Mark a couple times. He is awesome!  I've been using Rails, etc for 7+ years but I still get hung up once in a while...Mark knows his $h!.  I won't search for mentors anymore...I'll just use Mark.",
+    "rating": 5,
+    "created_at": 1558632937,
+    "writer": {
+      "username": "atstockland",
+      "avatar_url": "https://www.gravatar.com/avatar/1309fa08e230c6cbe9a2b27964a40516?d=mm&s=200",
+      "name": "Adam Stockland"
+    }
+  },
+  {
+    "content": "Mark is a great mentor! He's super knowledgable and as a student I appreciate his ability to explain concepts clearly. I can tell he really cares about my learning and progress. He is fair and makes sure I'm getting value from my sessions. Highly recommended!",
+    "rating": 5,
+    "created_at": 1511161493,
+    "writer": {
+      "username": "59980f51f03e9d26f26b",
+      "avatar_url": "https://www.gravatar.com/avatar/50e0adbf62c4c0b7a5b7f3fbb184ac08?d=mm",
+      "name": "Isabella Martinez"
+    }
+  },
+  {
+    "content": "Ive known about Mark for a while through his React courses, I reached out to him to help me start architecting an app I am building as a side project. He was awesome! I got answers to alot of the areas of this project that I was unfamiliar with and we planned out a way to get the project going. Really looking forward to continuing to work with him.",
+    "rating": 5,
+    "created_at": 1567202161,
+    "writer": {
+      "username": "ad6ec27f40cf3867a34f",
+      "avatar_url": "https://www.gravatar.com/avatar/c87983dea3f7efa12b1600c66eeb246b?d=mm",
+      "name": "Thomas Anderson"
+    }
+  },
+  {
+    "content": "Mark has a wealth of knowledge and expertise that is hard to find. Perfect mentor in many ways: clear and concise communication, reliable and a great teacher. I highly recommend working with him if you need help.",
+    "rating": 5,
+    "created_at": 1560777225,
+    "writer": {
+      "username": "muchstudio",
+      "avatar_url": "https://www.gravatar.com/avatar/9af53de68b1cd6f6cd3e07aea629d8b1?d=mm&s=200",
+      "name": "Jelena Grimshaw"
+    }
+  }
+]

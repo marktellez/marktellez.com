@@ -1,0 +1,9 @@
+# Example .embedignore
+node_modules/
+.next/
+.git/
+dist/
+build/
+*.min.js
+*.log
+.DS_Store

@@ -9,20 +9,38 @@ export function generateSeoMetadata({
     locale = 'en_US',
     twitter = {}
 }) {
+    // Fix the default image URL
+    const defaultImage = `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
 
-    const defaultImage = `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`
+    // Normalize URL to match sitemap format
+    let normalizedUrl = url;
+    if (url) {
+        // Ensure URL is using the correct domain
+        if (!url.startsWith('https://marktellez.com')) {
+            normalizedUrl = url.replace(/^https?:\/\/[^\/]+/, 'https://marktellez.com');
+        }
+
+        // Handle trailing slashes consistently (only homepage has trailing slash)
+        if (normalizedUrl === 'https://marktellez.com') {
+            normalizedUrl = 'https://marktellez.com/';
+        } else if (normalizedUrl.endsWith('/') && normalizedUrl !== 'https://marktellez.com/') {
+            normalizedUrl = normalizedUrl.slice(0, -1);
+        }
+    }
+
     const metadata = {
         title: title,
         description: description,
         keywords: keywords.join(', '),
-        metadataBase: url ? new URL(url) : undefined,
-        alternates: url ? { canonical: url } : undefined,
+        metadataBase: new URL('https://marktellez.com'),
+        alternates: normalizedUrl ? { canonical: normalizedUrl } : undefined,
         openGraph: {
             title: title,
             description: description,
-            url: url,
+            url: normalizedUrl,
             type: type,
-            images: [{ url: image | defaultImage }],
+            // Fix the OR operator
+            images: [{ url: image || defaultImage }],
             siteName: siteName || title,
             locale: locale,
         },
@@ -30,7 +48,8 @@ export function generateSeoMetadata({
             card: twitter.card || 'summary_large_image',
             title: title,
             description: description,
-            images: image ? [image] : defaultImage,
+            // Fix the array format
+            images: image ? [image] : [defaultImage],
             site: twitter.site,
             creator: twitter.creator,
         },

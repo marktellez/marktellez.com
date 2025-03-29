@@ -24,7 +24,7 @@ export const metadata = generateSeoMetadata({
   url: "https://marktellez.com",
   image: "https://marktellez.com/images/og-image.jpg",
   type: "article",
-  siteName: "My Website",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer",
   twitter: {
     card: "summary_large_image",
     site: "@mywebsite",

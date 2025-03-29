@@ -19,6 +19,22 @@ const EXCLUDED_PATHS = [
   'sitemap.xml'
 ];
 
+// Function to normalize URLs consistently
+function normalizeUrl(path) {
+  // Ensure path starts with a slash if it's not empty
+  if (path && !path.startsWith('/')) {
+    path = '/' + path;
+  }
+
+  // For homepage, return just the domain with trailing slash
+  if (!path || path === '/') {
+    return `${SITE_URL}/`;
+  }
+
+  // For other pages, ensure no trailing slash
+  return `${SITE_URL}${path}`.replace(/\/$/, '');
+}
+
 // Ensure the public directory exists
 if (!fs.existsSync(PUBLIC_DIR)) {
   fs.mkdirSync(PUBLIC_DIR, { recursive: true });
@@ -64,7 +80,7 @@ function getPages() {
     }
 
     pages.push({
-      url: `${SITE_URL}${urlPath}`,
+      url: normalizeUrl(urlPath),
       lastModified: new Date().toISOString().split('T')[0], // YYYY-MM-DD
       changeFrequency: urlPath === '/' ? 'daily' : 'weekly',
       priority: urlPath === '/' ? 1.0 : 0.8,
@@ -78,7 +94,7 @@ function getPages() {
     resumeData.forEach(company => {
       if (company.slug) {
         pages.push({
-          url: `${SITE_URL}/companies-ive-worked-for/${company.slug}`,
+          url: normalizeUrl(`/companies-ive-worked-for/${company.slug}`),
           lastModified: new Date().toISOString().split('T')[0],
           changeFrequency: 'monthly',
           priority: 0.7,
@@ -100,7 +116,7 @@ function getPages() {
       skillCategory.forEach(skill => {
         const skillSlug = skill.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-').replace(/#/g, 'sharp');
         pages.push({
-          url: `${SITE_URL}/i-know/${skillSlug}`,
+          url: normalizeUrl(`/i-know/${skillSlug}`),
           lastModified: new Date().toISOString().split('T')[0],
           changeFrequency: 'weekly',
           priority: 0.8,
@@ -123,7 +139,7 @@ function getPages() {
     // Check if the file exists
     if (fs.existsSync(path.join(PUBLIC_DIR, file.replace(/^\//, '')))) {
       pages.push({
-        url: `${SITE_URL}${file}`,
+        url: normalizeUrl(file),
         lastModified: new Date().toISOString().split('T')[0],
         changeFrequency: 'weekly',
         priority: 0.7,

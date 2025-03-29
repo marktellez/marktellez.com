@@ -120,7 +120,9 @@ export default function ContactPage() {
 
   return (
     <div className="container mx-auto py-8 px-4">
-      <h1 className="text-3xl font-bold mb-6">Contact Me</h1>
+      <div classname="w-full">
+        <h1 className="text-3xl font-bold mb-6 w-full ">Contact Me</h1>
+      </div>
 
       <div className="max-w-2xl mx-auto bg-gray-900/30 p-6 rounded-lg border border-white/10">
         <p className="mb-6 text-gray-300">

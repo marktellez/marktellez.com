@@ -132,6 +132,20 @@ async function buildResumePDF() {
 
     y -= 50; // Significantly increased margin before "other" section
 
+    // Function to draw a horizontal line
+    const drawHorizontalLine = (yPosition) => {
+      page.drawLine({
+        start: { x: margin, y: yPosition },
+        end: { x: page.getWidth() - margin, y: yPosition },
+        thickness: 1,
+        color: rgb(0.8, 0.8, 0.8), // Light gray line
+      });
+      return yPosition - 15; // Return new y position after line
+    };
+
+    // After personal info section
+    y -= 20; // Just add spacing instead of drawing a line
+
     // Add "Builder & Engineer" heading for other info
     if (statsData.other) {
       page.drawText("Builder & Engineer", {
@@ -153,8 +167,74 @@ async function buildResumePDF() {
       y -= 15;
     }
 
-    y -= 25; // Additional space before skills section
+    // Removed horizontal line after Builder & Engineer section
+    y -= 10; // Just add some spacing instead
 
+    // Achievement box section
+    y -= 20;
+
+    // Create a bordered box for the achievement
+    const boxMargin = 10;
+    const boxWidth = page.getWidth() - (margin * 2);
+    const boxHeight = 85;
+    const cornerRadius = 4;
+
+    // Draw box with rounded corners - no background color
+    page.drawRectangle({
+      x: margin - boxMargin,
+      y: y - boxHeight + boxMargin,
+      width: boxWidth + (boxMargin * 2),
+      height: boxHeight,
+      borderColor: rgb(0.7, 0.7, 0.7),
+      borderWidth: 1,
+      color: undefined,
+      borderRadius: cornerRadius,
+    });
+
+    // Achievement content inside the box
+    y -= 15;
+
+    page.drawText('AI Programming Champion - CodinGame Fantastic Bits', {
+      x: margin,
+      y,
+      size: 12,
+      font: boldFont,
+    });
+
+    y -= 15;
+
+    page.drawText('Ranked #8 out of 5,000 participants worldwide', {
+      x: margin + 10,
+      y,
+      size: 10,
+      font: font,
+    });
+
+    y -= 15;
+
+    page.drawText('Developed an advanced AI agent using reinforcement learning techniques', {
+      x: margin + 10,
+      y,
+      size: 10,
+      font: font,
+    });
+
+    y -= 15;
+
+    page.drawText('Leaderboard: https://www.codingame.com/multiplayer/bot-programming/fantastic-bits/leaderboard', {
+      x: margin + 10,
+      y,
+      size: 10,
+      font: font,
+    });
+
+    y -= 30;
+
+    // After achievement box section
+    y -= 15; // Just add spacing instead of drawing a line
+
+    // Skills section
+    y -= 15;
     page.drawText('Skills', {
       x: margin,
       y,
@@ -162,7 +242,10 @@ async function buildResumePDF() {
       font: boldFont,
     });
 
-    y -= 20;
+    // Add horizontal line under Skills heading
+    y -= 10;
+    drawHorizontalLine(y);
+    y -= 30;
 
     // Define font weights through size and color
     const fontStyles = {
@@ -260,7 +343,11 @@ async function buildResumePDF() {
       font: boldFont,
     });
 
-    y -= 20;
+    y -= 10;
+
+    drawHorizontalLine(y);
+
+    y -= 30;
 
     // Add education message
     page.drawText('To see my education history, visit https://marktellez.com/education', {
@@ -298,7 +385,9 @@ async function buildResumePDF() {
       height: emojiSize,
     });
 
-    y -= 30;
+    // Force Work Experience to start on a new page
+    page = pdfDoc.addPage([595.28, 841.89]);
+    y = 800; // Reset y position for the new page
 
     // Add work experience section
     page.drawText('Work Experience', {
@@ -308,7 +397,11 @@ async function buildResumePDF() {
       font: boldFont,
     });
 
-    y -= 20;
+    y -= 10;
+
+    drawHorizontalLine(y);
+
+    y -= 30;
 
     // Sort companies by 'from' year in descending order
     const sortedCompanies = [...resumeData].sort((a, b) => {
@@ -368,98 +461,92 @@ async function buildResumePDF() {
       y -= 15;
     });
 
-    // Add reviews section if there's space
-    if (y > 200) {
+    // Add reviews section - force it to start on page 5
+    // First, count current pages and add pages until we reach page 5
+    const currentPageCount = pdfDoc.getPageCount();
+    console.log(`Current page count before reviews: ${currentPageCount}`);
+
+    // If we have fewer than 5 pages, add empty pages until we reach page 5
+    while (pdfDoc.getPageCount() < 5) {
+      pdfDoc.addPage([595.28, 841.89]);
+      console.log(`Added page, now at ${pdfDoc.getPageCount()} pages`);
+    }
+
+    // Get the 5th page (index 4)
+    page = pdfDoc.getPage(4);
+    y = 800; // Reset y position for the new page
+
+    // Use specific handpicked reviews instead of filtering from reviewsData
+    const handpickedReviews = [
+      {
+        content: "I've used Mark a couple times. He is awesome! I've been using Rails, etc for 7+ years but I still get hung up once in a while...Mark knows his $h!. I won't search for mentors anymore...I'll just use Mark.",
+        writer: { name: "Adam Stockland" }
+      },
+      {
+        content: "Ive known about Mark for a while through his React courses, I reached out to him to help me start architecting an app I am building as a side project. He was awesome! I got answers to alot of the areas of this project that I was unfamiliar with and we planned out a way to get the project going. Really looking forward to continuing to work with him.",
+        writer: { name: "Thomas Anderson" }
+      },
+      {
+        content: "Mark has a wealth of knowledge and expertise that is hard to find. Perfect mentor in many ways: clear and concise communication, reliable and a great teacher. I highly recommend working with him if you need help.",
+        writer: { name: "Jelena Grimshaw" }
+      },
+      {
+        content: "Wow, Mark has really proved himself to be an expert in many ways. Definitely worth the investment and here's why: Pros: He works really fast, gave me some really helpful tips, explained me everything through meaningful examples and even improved some parts of already existing code in a way which makes them more clean and usable. Cons: I only wish the session was longer as I am looking forward to another one :)",
+        writer: { name: "Daniel Star" }
+      },
+      {
+        content: "Mark is so good at JavaScript and React (and Redux). He immediately knows how to address the task at hand and then starts throwing down code. I really appreciate his positive attitude and the time he takes to walk me through the work.",
+        writer: { name: "Ashley" }
+      },
+      {
+        content: "Mark has been helping us daily with my website for about a week now and I would confidently recommend him to any peer looking for someone who is a fast developer, strong communicator and honest worker.",
+        writer: { name: "Jack Bordner" }
+      },
+      {
+        content: "Mark completed a project for us within a short amount of time. His code was excellent and he always confirmed we understood his work for the handoff.",
+        writer: { name: "Jeff Carroll" }
+      }
+    ];
+
+    console.log(`Total reviews to process: ${handpickedReviews.length}`);
+    console.log(`Reviews: ${handpickedReviews.map(r => r.writer.name).join(', ')}`);
+
+    if (handpickedReviews.length > 0) {
+      page.drawText('Client Reviews', {
+        x: margin,
+        y,
+        size: 16,
+        font: boldFont,
+      });
+
       y -= 10;
+      drawHorizontalLine(y);
+      y -= 20;
 
-      // Filter reviews with at least 100 characters
-      const filteredReviews = reviewsData.filter(review =>
-        review.content && review.content.length >= 100
-      );
+      // Process handpicked reviews
+      handpickedReviews.forEach((review, index) => {
+        console.log(`Processing review ${index + 1} by ${review.writer.name}, y position: ${y}`);
 
-      if (filteredReviews.length > 0) {
-        page.drawText('Client Reviews', {
-          x: margin,
-          y,
-          size: 16,
-          font: boldFont,
-        });
+        // Check if we need a new page - ensure enough space for at least 5 lines
+        if (y < 200) {
+          console.log(`  Adding new page for review ${index + 1}, y was: ${y}`);
+          page = pdfDoc.addPage([595.28, 841.89]);
+          y = 800;
+        }
 
-        y -= 20;
+        // Handle text wrapping for review content
+        const maxWidth = page.getWidth() - (margin * 2);
+        const words = review.content.split(' ');
+        let line = '';
+        const lineHeight = 15; // Increased line height
+        let linesCount = 0;
+        const maxLines = 5; // Limit to 5 lines per review
 
-        // Deduplicate reviews by writer
-        const uniqueReviewers = new Map();
-        let reviewCount = 0;
-        const maxReviews = 5; // Show only top 5 reviews
+        for (const word of words) {
+          const testLine = line + (line ? ' ' : '') + word;
+          const textWidth = font.widthOfTextAtSize(testLine, 10);
 
-        // Process reviews (show up to 5)
-        filteredReviews.forEach((review) => {
-          // Skip if we've already shown 5 reviews
-          if (reviewCount >= maxReviews) {
-            return;
-          }
-
-          // Get reviewer identifier
-          const reviewerId = review.writer?.id ||
-            review.writer?.name ||
-            review.writer?.username ||
-            'Anonymous';
-
-          // Skip if we already have a review from this person
-          if (uniqueReviewers.has(reviewerId)) {
-            return;
-          }
-
-          // Add this reviewer to our map
-          uniqueReviewers.set(reviewerId, true);
-          reviewCount++;
-
-          // Check if we need a new page - ensure enough space for at least 5 lines
-          if (y < 200) {
-            page = pdfDoc.addPage([595.28, 841.89]);
-            y = 800;
-          }
-
-          // Handle text wrapping for review content
-          const maxWidth = page.getWidth() - (margin * 2);
-          const words = review.content.split(' ');
-          let line = '';
-          const lineHeight = 15; // Increased line height
-          let linesCount = 0;
-          const maxLines = 5; // Limit to 5 lines per review
-
-          for (const word of words) {
-            const testLine = line + (line ? ' ' : '') + word;
-            const textWidth = font.widthOfTextAtSize(testLine, 10);
-
-            if (textWidth > maxWidth && line) {
-              // Check if we need a new page
-              if (y < 100) {
-                page = pdfDoc.addPage([595.28, 841.89]);
-                y = 800;
-              }
-
-              page.drawText(line, {
-                x: margin,
-                y,
-                size: 10,
-                font: font,
-              });
-              y -= lineHeight;
-              line = word;
-              linesCount++;
-
-              // Limit number of lines per review
-              if (linesCount >= maxLines) {
-                line += '...';
-                break;
-              }
-            } else {
-              line = testLine;
-            }
-          }
-
-          if (line) {
+          if (textWidth > maxWidth && line) {
             // Check if we need a new page
             if (y < 100) {
               page = pdfDoc.addPage([595.28, 841.89]);
@@ -473,38 +560,64 @@ async function buildResumePDF() {
               font: font,
             });
             y -= lineHeight;
+            line = word;
+            linesCount++;
+
+            // Limit number of lines per review
+            if (linesCount >= maxLines) {
+              line += '...';
+              break;
+            }
+          } else {
+            line = testLine;
           }
+        }
 
-          // Reviewer name
-          const reviewerName = review.writer?.name || review.writer?.username || 'Anonymous';
-
+        if (line) {
           // Check if we need a new page
           if (y < 100) {
             page = pdfDoc.addPage([595.28, 841.89]);
             y = 800;
           }
 
-          page.drawText(`- ${reviewerName}`, {
+          page.drawText(line, {
             x: margin,
             y,
             size: 10,
-            font: boldFont,
+            font: font,
           });
+          y -= lineHeight;
+        }
 
-          y -= 25; // Increased spacing between reviews
-        });
+        // Reviewer name
+        const reviewerName = review.writer?.name || 'Anonymous';
 
-        // Add link to see all reviews
-        y -= 10;
-        page.drawText('See all my testimonials at: https://marktellez.com/testimonials', {
+        // Check if we need a new page
+        if (y < 100) {
+          page = pdfDoc.addPage([595.28, 841.89]);
+          y = 800;
+        }
+
+        page.drawText(`- ${reviewerName}`, {
           x: margin,
           y,
           size: 10,
-          font: font,
+          font: boldFont,
         });
 
-        y -= 20;
-      }
+        y -= 25; // Increased spacing between reviews
+      });
+
+      // Add link to see all reviews
+      y -= 10;
+      page.drawText('See all my testimonials at: https://marktellez.com/testimonials', {
+        x: margin,
+        y,
+        size: 10,
+        font: font,
+      });
+
+      y -= 20;
     }
 
     // Add footer with website URL

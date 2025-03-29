@@ -15,11 +15,14 @@ export default function Card({
   const frontRef = useRef(null);
   const backRef = useRef(null);
   const [cardHeight, setCardHeight] = useState('auto');
+  const [isLoaded, setIsLoaded] = useState(!imageUrl);
 
   // Define color mappings
   const colorMap = {
     purple: "bg-purple-800 border-purple-600 hover:bg-purple-700",
     green: "bg-green-800 border-green-600 hover:bg-green-700",
+    teal: "bg-teal-800 border-teal-600 hover:bg-teal-700",
+    orange: "bg-orange-800 border-orange-600 hover:bg-orange-700",
   };
 
   // Validate color
@@ -28,9 +31,14 @@ export default function Card({
   }
   const colorClasses = colorMap[color];
 
+  // Handle image load completion
+  const handleImageLoad = () => {
+    setIsLoaded(true);
+  };
+
   // Measure front/back to set container height
   useEffect(() => {
-    if (frontRef.current && backRef.current) {
+    if (frontRef.current && backRef.current && isLoaded) {
       const updateHeight = () => {
         const frontHeight = frontRef.current?.offsetHeight || 0;
         const backHeight = backRef.current?.offsetHeight || 0;
@@ -38,13 +46,22 @@ export default function Card({
         const maxHeight = Math.max(frontHeight, backHeight);
         setCardHeight(maxHeight);
       };
+
       // Initial height calculation
       updateHeight();
+
       // Recheck height after a short delay to account for any dynamic content
       const timeoutId = setTimeout(updateHeight, 100);
-      return () => clearTimeout(timeoutId);
+
+      // Add window resize listener to handle responsive changes
+      window.addEventListener('resize', updateHeight);
+
+      return () => {
+        clearTimeout(timeoutId);
+        window.removeEventListener('resize', updateHeight);
+      };
     }
-  }, [children, isFlipped, imageUrl]);
+  }, [children, isFlipped, imageUrl, isLoaded]);
 
   const handleFlip = () => setIsFlipped(!isFlipped);
 
@@ -71,6 +88,8 @@ export default function Card({
                 width={imageWidth}
                 height={imageHeight}
                 className="object-cover rounded-md mb-4"
+                onLoad={handleImageLoad}
+                priority
               />
             </div>
           )}

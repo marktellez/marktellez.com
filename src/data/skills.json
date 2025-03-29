@@ -1,0 +1,65 @@
+{
+    "Programming Languages": [
+        "C#",
+        "JavaScript",
+        "Python",
+        "Ruby",
+        "TypeScript"
+    ],
+    "Web Development": [
+        "ASP.NET",
+        "CSS",
+        "Django",
+        "NextJS",
+        "ReactJS",
+        "NodeJS",
+        "TailwindCSS",
+        "Ruby on Rails",
+        "SEO",
+        "Jest"
+    ],
+    "Databases": [
+        "MongoDB",
+        "MySQL",
+        "PostgreSQL",
+        "Vector Databases"
+    ],
+    "Machine Learning & AI": [
+        "CNNs",
+        "GANs",
+        "Machine Learning",
+        "Supervised Learning",
+        "Transformers",
+        "Pytorch",
+        "Scikit-learn",
+        "Reinforcement Learning",
+        "Large Language Models",
+        "Model Distillation",
+        "Transfer Learning",
+        "Agentic Systems"
+    ],
+    "Cloud & DevOps": [
+        "AWS Cloud Services",
+        "AWS Lambda",
+        "AWS S3",
+        "Docker",
+        "Linux",
+        "Serverless Development",
+        "Systems Scaling",
+        "Bash Scripting"
+    ],
+    "Audio/Speech Technologies": [
+        "ElevenLabs",
+        "Voice Synthesis",
+        "Automatic Speech Recognition",
+        "Sound Synthesis",
+        "Audio Mixing"
+    ],
+    "Creative Tools": [
+        "Photoshop",
+        "Illustrator",
+        "Figma",
+        "Unity",
+        "Ableton Live"
+    ]
+}

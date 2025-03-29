@@ -41,7 +41,7 @@ h5 {
 }
 
 p {
-  @apply font-sans text-base tracking-wide my-8 max-w-[65ch] text-center mx-auto lg:mx-0;
+  @apply font-sans text-base tracking-wide my-8 text-center mx-auto lg:mx-0;
 }
 
 .container {

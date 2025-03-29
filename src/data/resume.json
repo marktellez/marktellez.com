@@ -1,273 +1,625 @@
-{
-  "skills": [
-    {
-      "category": "Tools",
-      "name": "Unity",
-      "slug": "unity",
-      "url": "/i-know/unity"
-    },
-    {
-      "category": "Web Development",
-      "name": "Tailwind Css",
-      "slug": "tailwind-css",
-      "url": "/i-know/tailwind-css"
-    },
-    {
-      "category": "AI & Machine Learning",
-      "name": "Supervised Learning",
-      "slug": "supervised-learning",
-      "url": "/i-know/supervised-learning"
-    },
-    {
-      "category": "AI & Machine Learning",
-      "name": "Reinforcement Learning",
-      "slug": "reinforcement-learning",
-      "url": "/i-know/reinforcement-learning"
-    },
-    {
-      "category": "Web Development",
-      "name": "React.js",
-      "slug": "react-js",
-      "url": "/i-know/react-js"
-    },
-    {
-      "category": "AI & Machine Learning",
-      "name": "Pytorch",
-      "slug": "pytorch",
-      "url": "/i-know/pytorch"
-    },
-    {
-      "category": "Web Development",
-      "name": "Python",
-      "slug": "python",
-      "url": "/i-know/python"
-    },
-    {
-      "category": "Databases",
-      "name": "Postgresql",
-      "slug": "postgresql",
-      "url": "/i-know/postgresql"
-    },
-    {
-      "category": "Databases",
-      "name": "Pinecone",
-      "slug": "pinecone",
-      "url": "/i-know/pinecone"
-    },
-    {
-      "category": "Tools",
-      "name": "Photoshop",
-      "slug": "photoshop",
-      "url": "/i-know/photoshop"
-    },
-    {
-      "category": "Web Development",
-      "name": "Next.js",
-      "slug": "next-js",
-      "url": "/i-know/next-js"
-    },
-    {
-      "category": "Databases",
-      "name": "Mysql",
-      "slug": "mysql",
-      "url": "/i-know/mysql"
-    },
-    {
-      "category": "Databases",
-      "name": "Mongodb",
-      "slug": "mongodb",
-      "url": "/i-know/mongodb"
-    },
-    {
-      "category": "Web Development",
-      "name": "Javascript",
-      "slug": "javascript",
-      "url": "/i-know/javascript"
-    },
-    {
-      "category": "Tools",
-      "name": "Cursor",
-      "slug": "cursor",
-      "url": "/i-know/cursor"
-    },
-    {
-      "category": "Web Development",
-      "name": "Aws S3",
-      "slug": "aws-s3",
-      "url": "/i-know/aws-s3"
-    },
-    {
-      "category": "Web Development",
-      "name": "Aws Lambda",
-      "slug": "aws-lambda",
-      "url": "/i-know/aws-lambda"
-    },
-    {
-      "category": "AI & Machine Learning",
-      "name": "Agentic Tools",
-      "slug": "agentic-tools",
-      "url": "/i-know/agentic-tools"
-    },
-    {
-      "category": "Tools",
-      "name": "Ableton Live",
-      "slug": "ableton-live",
-      "url": "/i-know/ableton-live"
-    }
-  ],
-  "companies": [
-    {
-      "from": "2024",
-      "to": "2025",
-      "company": "Zooly AI",
-      "title": "Sr. Web Developer & Voice Synthesis Lead",
-      "highlights": [
-        "Led voice synthesis teams building sophisticated voice models",
-        "Developed specialized 'tuning' system for ElevenLabs integration",
-        "Created feedback loop system for continuous model improvement",
-        "Leveraged React, JavaScript, TailwindCSS, and AWS services",
-        "Built and trained voice models for high-profile celebrities"
-      ],
-      "url": "/companies-ive-worked-for/zooly-ai"
-    },
-    {
-      "from": "2006",
-      "to": "2006",
-      "company": "YouTube",
-      "title": "Software Engineer (Contract)",
-      "highlights": [
-        "Contributed to development of original comment system",
-        "Built on open source Bulletin Board framework",
-        "Wrote PERL and Ruby scripts",
-        "Developed systems to handle rapidly growing user engagement"
-      ],
-      "url": "/companies-ive-worked-for/youtube"
-    },
-    {
-      "from": "2003",
-      "to": "2003",
-      "company": "X",
-      "title": "Software Engineer (Contract)",
-      "highlights": [
-        "Built pre-PayPal payment processing system using PERL",
-        "Worked 60+ hour weeks in high-intensity startup environment",
-        "Gained valuable lessons about startup culture",
-        "Experienced the ephemeral nature of software projects"
-      ],
-      "url": "/companies-ive-worked-for/x"
-    },
-    {
-      "from": "",
-      "to": "Present",
-      "company": "Various Startups",
-      "title": "",
-      "highlights": [],
-      "url": "/companies-ive-worked-for/various-startups"
-    },
-    {
-      "from": "2003",
-      "to": "2004",
-      "company": "UpperDeck",
-      "title": "Software Engineer",
-      "highlights": [
-        "Built online companion for Marvel Vs card game",
-        "Worked with mixed tech stack of ASP.NET, PERL, and PostgreSQL",
-        "First professional experience with PostgreSQL",
-        "Enhanced physical card game with digital tools"
-      ],
-      "url": "/companies-ive-worked-for/upperdeck"
-    },
-    {
-      "from": "2015",
-      "to": "2015",
-      "company": "Uber",
-      "title": "Database Engineer (Contract)",
-      "highlights": [
-        "Wrote PostgreSQL migration scripts",
-        "Facilitated transition to SchemalessDB (MongoDB) and MySQL",
-        "Developed data translation pipelines",
-        "Ensured smooth data migration between different database systems"
-      ],
-      "url": "/companies-ive-worked-for/uber"
-    },
-    {
-      "from": "2016",
-      "to": "2020",
-      "company": "ReactU YouTube",
-      "title": "Creator & Educator",
-      "highlights": [
-        "Created YouTube channel teaching JavaScript, ReactJS, NextJS, and MongoDB",
-        "Grew channel to 33,000 subscribers",
-        "Generated approximately $7,000 monthly in revenue",
-        "Operated from Mexico City"
-      ],
-      "url": "/companies-ive-worked-for/reactu-youtube"
-    },
-    {
-      "from": "2001",
-      "to": "2003",
-      "company": "Intel",
-      "title": "Jr. Software Engineer",
-      "highlights": [
-        "Built pioneering edge sports streaming service for NHL and NBA",
-        "Developed streaming media components for edge devices",
-        "Published four technical articles with WroxPress",
-        "Worked with early streaming media technologies"
-      ],
-      "url": "/companies-ive-worked-for/intel"
-    },
-    {
-      "from": "2005",
-      "to": "2005",
-      "company": "GEICO",
-      "title": "Backend Software Engineer (Contract)",
-      "highlights": [
-        "Developed SOAP interfaces between modern systems and legacy COBOL infrastructure",
-        "Created Ruby automation scripts to streamline interface development",
-        "Worked with DB2 and legacy database systems",
-        "Bridged gap between web services and mainframe systems"
-      ],
-      "url": "/companies-ive-worked-for/geico"
-    },
-    {
-      "from": "2020",
-      "to": "2022",
-      "company": "DevmentorLive",
-      "title": "Founder & Consultant",
-      "highlights": [
-        "Founded consulting company specializing in ReactJS, TypeScript, NextJS, and MongoDB",
-        "Conducted medical AI research in Mexico with X-rays and diagnostic models",
-        "Developed Text-To-Speech model using GANs and Transformer architectures",
-        "Built escape room booking application and other client projects",
-        "Balanced tech work with building sustainable rural lifestyle"
-      ],
-      "url": "/companies-ive-worked-for/devmentor-live"
-    },
-    {
-      "from": "2017",
-      "to": "2020",
-      "company": "Codementor",
-      "title": "Senior Mentor & Developer",
-      "highlights": [
-        "Helped thousands of students, developers, and companies",
-        "Specialized in Ruby on Rails, ReactJS, and JavaScript",
-        "Accumulated almost 500 five-star reviews",
-        "Worked directly with clients on development projects"
-      ],
-      "url": "/companies-ive-worked-for/codementor"
-    },
-    {
-      "from": "2004",
-      "to": "2005",
-      "company": "Callaway Golf",
-      "title": "ASP.NET Developer",
-      "highlights": [
-        "Built e-commerce platform for online store",
-        "Integrated merchant account services with backend systems",
-        "Managed extensive catalog of golfing products",
-        "Worked with ASP.NET technology"
-      ],
-      "url": "/companies-ive-worked-for/callaway-golf"
-    }
-  ]
-}
+[
+  {
+    "company": "Callaway Golf",
+    "slug": "callaway-golf",
+    "role": "ASP.NET Developer",
+    "from": "2004",
+    "to": "2005",
+    "highlights": [
+      "Maintained MySQL database systems for the e-commerce platform",
+      "Developed stored procedures to efficiently manage the large product catalog",
+      "Optimized complex queries for inventory management and order processing",
+      "Built ASP.NET components for the online store's shopping experience",
+      "Integrated merchant account services for secure payment processing",
+      "Developed backend services to manage the extensive product catalog",
+      "Introduced to Ruby/LISP by Jim Weirich",
+      "Pivoted to Ruby on Rails development"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "At Callaway Golf, I was part of the ASP.NET team responsible for building their online store. This e-commerce platform integrated merchant account services with sophisticated backend systems to manage Callaway's extensive catalog of golfing products."
+        ]
+      },
+      {
+        "heading": "Technical Contributions",
+        "paragraphs": [
+          "The project utilized ASP.NET with a MySQL database backend. My previous experience with relational database management systems positioned me as the team's database specialist, responsible for database maintenance and development of complex queries and stored procedures."
+        ]
+      },
+      {
+        "heading": "Database Engineering",
+        "paragraphs": [
+          "Maintained MySQL database systems for the e-commerce platform",
+          "Developed stored procedures to efficiently manage the large product catalog",
+          "Optimized complex queries for inventory management and order processing"
+        ]
+      },
+      {
+        "heading": "E-commerce Development",
+        "paragraphs": [
+          "Built ASP.NET components for the online store's shopping experience",
+          "Integrated merchant account services for secure payment processing",
+          "Developed backend services to manage the extensive product catalog"
+        ]
+      },
+      {
+        "heading": "Career Turning Point",
+        "paragraphs": [
+          "During my time at Callaway Golf, I was fortunate to work with senior developer Jim Weirich, who introduced me to Ruby and LISP. This exposure sparked my interest in functional programming paradigms and ultimately led to a significant shift in my career trajectory.",
+          "My growing passion for Ruby and functional programming principles inspired me to leave Callaway when Jim did, allowing me to pursue opportunities focused on Ruby development and, later, Ruby on Rails. This pivotal experience at Callaway Golf marked the beginning of my journey into a new programming ecosystem that would shape my future career."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Codementor",
+    "slug": "codementor",
+    "role": "Senior Developer & Mentor",
+    "from": "2014",
+    "to": "2020",
+    "highlights": [
+      "Earned nearly 500 five-star reviews from clients worldwide",
+      "Helped thousands of developers with Ruby on Rails, ReactJS, and JavaScript",
+      "Developed a reputation for exceeding client expectations",
+      "Gained deep insights into consulting business management",
+      "Transitioned to entrepreneurship with DevmentorLive",
+      "Worked with diverse clients across industries and technical backgrounds"
+    ],
+    "heroComponent": "codementor.jsx",
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "I transitioned from YouTube to Codementor during the platform's peak success, spending nearly 6 years helping thousands of students, developers, and companies build software using Ruby on Rails, ReactJS, and JavaScript."
+        ]
+      },
+      {
+        "heading": "Client-Focused Development",
+        "paragraphs": [
+          "During my time at Codementor, I accumulated almost 500 five-star reviews—a remarkable achievement considering how rarely clients leave reviews. This experience taught me invaluable lessons about service, as I worked directly with clients rather than reporting to managers disconnected from the end results.",
+          "I consistently went above and beyond expectations to serve real humans with real desires and real challenges. This direct client interaction provided insights into user needs that traditional employment structures often obscure."
+        ]
+      },
+      {
+        "heading": "Key Accomplishments",
+        "paragraphs": [
+          "Earned nearly 500 five-star reviews from clients worldwide",
+          "Helped thousands of developers with Ruby on Rails, ReactJS, and JavaScript",
+          "Developed a reputation for exceeding client expectations"
+        ]
+      },
+      {
+        "heading": "Business Insights",
+        "paragraphs": [
+          "Despite taking a significant pay cut compared to traditional software engineering roles, I found this period immensely rewarding. The experience provided deep insights into running a consulting business, managing client relationships, and delivering value directly to end users.",
+          "Working with diverse clients across various industries and technical backgrounds enhanced my ability to communicate complex concepts clearly and adapt my teaching approach to different learning styles."
+        ]
+      },
+      {
+        "heading": "Entrepreneurial Transition",
+        "paragraphs": [
+          "When Codementor was acquired by new owners and the platform began to deteriorate, I recognized an opportunity to take control of my future. This led me to found DevmentorLive, where I could apply all the lessons learned from my years of mentoring while building a business aligned with my values and vision.",
+          "This transition from platform-based mentoring to entrepreneurship represented a natural evolution of my career, allowing me to continue serving developers while creating a sustainable business model."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "DevmentorLive",
+    "slug": "devmentor-live",
+    "role": "Founder & Consultant",
+    "from": "2020",
+    "to": "2022",
+    "website": "https://devmentor.live",
+    "highlights": [
+      "Built biogas system and solar-powered AI Box with RTX 4090s",
+      "Developed medical AI models outperforming 2018-2019 research papers",
+      "Created Text-To-Speech model with GANs/Transformers",
+      "Balanced tech work with rural farming lifestyle",
+      "ReactJS/TypeScript/NextJS/TailwindCSS/MongoDB expertise",
+      "Trained game-playing AI agents",
+      "Maintained mentorship relationships from Codementor"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "DevmentorLive was my consulting company that I founded after leaving Codementor. During this period, I balanced professional software development with building my house and farm, where I raise sheep, chickens, and grow crops.",
+          "I also built a Biogas bladder system for cooking from a blueprint online and all my power is Solar, including my development machine and my \"AI Box\" where I run 2 RTX 4090s for local model development and hosting."
+        ]
+      },
+      {
+        "heading": "Technical Focus",
+        "paragraphs": [
+          "I primarily worked with technologies I had mastered over the years: ReactJS, TypeScript, JavaScript, NextJS, TailwindCSS, and MongoDB. This expertise allowed me to efficiently deliver high-quality solutions for a diverse range of clients.",
+          "Simultaneously, I began exploring machine learning more deeply, developing agent models capable of playing classic arcade games and board games like Connect Four and Chinese Checkers."
+        ]
+      },
+      {
+        "heading": "Medical AI Research in Mexico",
+        "paragraphs": [
+          "During my time at DevmentorLive, I conducted significant research in medical diagnostics here in Mexico. I worked with labeled datasets of chest and brain X-rays, along with blood and hormone markers to train sophisticated diagnostic models using CNNs and Transformers.",
+          "My models achieved remarkable accuracy, outperforming several published papers from 2018 and 2019. This period marked my deeper dive into replicating and improving upon scientific papers in machine learning, with a particular focus on Supervised Learning techniques.",
+          "I also developed a Text-To-Speech model using GANs and Transformer architectures to replicate human speech with exceptional fidelity. This project involved building comprehensive datasets and fine-tuning the models to achieve natural-sounding voice synthesis, laying the groundwork for my later work at VoxBirdAI."
+        ]
+      },
+      {
+        "heading": "Key Projects",
+        "paragraphs": [
+          "Escape room booking application",
+          "Multiple e-commerce platforms",
+          "CRM applications for small businesses",
+          "Machine learning game-playing agents"
+        ]
+      },
+      {
+        "heading": "Continued Mentorship",
+        "paragraphs": [
+          "While running my consulting business, I maintained the mentoring relationships I had established during my time at Codementor. This allowed me to continue sharing knowledge and supporting developers in their growth journeys.",
+          "However, as AI technologies became increasingly capable, I observed a declining interest in traditional programming mentorship. This shift in the industry landscape prompted me to consider new opportunities."
+        ]
+      },
+      {
+        "heading": "Rural Tech Balance",
+        "paragraphs": [
+          "This period represented a unique balance between cutting-edge technology work and rural living. Building a house for my wife and I, with my own hands, and developing a small farm with livestock and crops provided a complementary counterpoint to the digital nature of my consulting work.",
+          "Eventually, I decided to explore new opportunities in the startup world, which led me to join Zooly and transition away from independent consulting."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "GEICO",
+    "slug": "geico",
+    "role": "Backend Software Engineer (Contract)",
+    "from": "2005",
+    "to": "2005",
+    "highlights": [
+      "Developed SOAP interfaces for COBOL/DB2 systems",
+      "Created Ruby automation scripts for interface development",
+      "Worked with legacy database systems",
+      "Trained offshore replacements during transition",
+      "Maintained systems during offshoring process"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "At GEICO, I served as a backend software engineer on a 6-month contract, developing interfaces between modern systems and legacy infrastructure. This role required bridging the gap between contemporary web services and decades-old mainframe systems."
+        ]
+      },
+      {
+        "heading": "Technical Contributions",
+        "paragraphs": [
+          "My primary responsibility was developing SOAP interfaces to legacy COBOL mini-computers using DB2 and other legacy database systems. This work was critical for enabling modern applications to communicate with GEICO's established insurance processing systems.",
+          "I leveraged my Ruby expertise to create automation scripts that streamlined the building of SOAP interfaces, demonstrating Ruby's power as a build tool and significantly improving the team's development workflow."
+        ]
+      },
+      {
+        "heading": "Key Responsibilities",
+        "paragraphs": [
+          "Developed SOAP interfaces connecting modern systems to legacy COBOL applications",
+          "Worked with DB2 and other legacy database systems to enable data access",
+          "Created Ruby automation scripts to streamline interface development"
+        ]
+      },
+      {
+        "heading": "Industry Lessons",
+        "paragraphs": [
+          "My time at GEICO provided valuable insights into the volatility of the tech industry. The entire team was laid off after six months as part of an offshoring initiative to India. While most colleagues departed immediately, I stayed two additional months to train replacements.",
+          "This experience taught me about industry fickleness while demonstrating professionalism through knowledge transfer. By prioritizing company needs over personal ego, I reinforced my reputation as a reliable professional in challenging circumstances."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Intel",
+    "slug": "intel",
+    "role": "Jr. Software Engineer",
+    "from": "2001",
+    "to": "2003",
+    "highlights": [
+      "Pioneered sports streaming for NHL/NBA",
+      "Led C++ COM+ to C# .NET migration",
+      "Developed edge streaming media components",
+      "Implemented content caching strategies",
+      "Published 4 technical articles with WroxPress"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "At Intel, I was part of a pioneering team building an edge sports streaming service for the NHL and NBA during the early days of streaming media, when delivering high-quality video content over the internet presented significant technical challenges."
+        ]
+      },
+      {
+        "heading": "Technical Evolution",
+        "paragraphs": [
+          "Our project began with COM+ components built in C++, focusing on performance and low-level system integration.  When Microsoft released .NET, we made the strategic decision to migrate to C#, which offered improved development efficiency and better integration with Microsoft's emerging web technologies.",
+          "This transition period was particularly valuable, as most team members had limited C# experience. We effectively learned while building, adapting our development practices to the new paradigm while maintaining project momentum."
+        ]
+      },
+      {
+        "heading": "Key Contributions",
+        "paragraphs": [
+          "Developed streaming media components for delivering sports content to edge devices",
+          "Led the migration from C++ COM+ components to C# .NET architecture",
+          "Implemented efficient caching strategies to optimize content delivery",
+          "Collaborated with NHL and NBA technical teams to ensure seamless integration"
+        ]
+      },
+      {
+        "heading": "Industry Recognition",
+        "paragraphs": [
+          "During my time at Intel, I published four technical articles with WroxPress, a leading publisher of programming books and resources. These articles were featured on the WroxPress homepage and covered topics including:",
+          "Using Visual Source Safe effectively in large team environments",
+          "Strategies for transitioning from C++ to C# development",
+          "ASP.NET implementation best practices",
+          "Web application architecture in the .NET framework"
+        ]
+      },
+      {
+        "heading": "Career Impact",
+        "paragraphs": [
+          "This experience at Intel was formative in my career, providing valuable insights into enterprise-scale software development, team collaboration during technology transitions, and the emerging field of internet video streaming that would later become ubiquitous."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "ReactU YouTube",
+    "slug": "reactu-youtube",
+    "role": "Content Creator & Educator",
+    "from": "2016",
+    "to": "2020",
+    "highlights": [
+      "33,000 subscribers with $7k monthly revenue",
+      "Created educational content on JavaScript/React ecosystem",
+      "Pioneered technical education from Mexico City",
+      "Developed effective teaching methodologies",
+      "Transitioned to machine learning/artificial intelligence"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "After my contract at Uber ended, I decided to monetize my skills by creating a YouTube channel focused on teaching  JavaScript, ReactJS, NextJS, and MongoDB. This entrepreneurial venture allowed me to build an audience while  deepening my expertise in modern web development technologies."
+        ]
+      },
+      {
+        "heading": "Channel Growth",
+        "paragraphs": [
+          "Operating from Mexico City, I grew the channel to 33,000 subscribers generating ~$7,000 monthly revenue. This experience taught valuable lessons about content creation, audience building, and the business aspects of technical education."
+        ]
+      },
+      {
+        "heading": "Key Accomplishments",
+        "paragraphs": [
+          "Built audience of 33,000 subscribers",
+          "Created educational content on JavaScript/React/NextJS/MongoDB",
+          "Generated $7,000 monthly revenue through content monetization"
+        ]
+      },
+      {
+        "heading": "Business Insights",
+        "paragraphs": [
+          "The YouTube channel served as both a technical and business education. I learned crucial lessons about revenue generation, audience development, and professional networking in the tech industry. These skills proved valuable in my later entrepreneurial ventures and technical leadership roles.",
+          "Creating high-quality educational content required deep understanding of the technologies I taught, pushing me to master React and JavaScript ecosystems while developing effective teaching methodologies."
+        ]
+      },
+      {
+        "heading": "New Horizons",
+        "paragraphs": [
+          "While the channel was successful, I eventually recognized that the significant time investment required for content creation was limiting my ability to explore new technical domains. I had begun developing interest in machine learning, particularly genetic algorithms, and decided to pivot my career to pursue these emerging technologies."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Uber",
+    "slug": "uber",
+    "role": "PostgreSQL Expert (Contract)",
+    "from": "2015",
+    "to": "2016",
+    "highlights": [
+      "PostgreSQL to MongoDB/MySQL migration",
+      "Developed database transition pipelines",
+      "Ensured data integrity during migrations",
+      "ReactJS career pivot after contract",
+      "Bridged sailing sabbatical and tech return"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "After taking two years off from professional coding (2013-2015) to build a small sailboat and sail it in the Pacific, I returned to the tech industry with a short 4-month contract at Uber."
+        ]
+      },
+      {
+        "heading": "Technical Contributions",
+        "paragraphs": [
+          "At Uber, I leveraged my PostgreSQL expertise to write migration scripts that facilitated the company's transition to SchemalessDB (later known as MongoDB) and MySQL. The work primarily involved data translation through pipelines, ensuring smooth data migration between different database systems."
+        ]
+      },
+      {
+        "heading": "Database Migration",
+        "paragraphs": [
+          "Wrote migration scripts for PostgreSQL to SchemalessDB/MongoDB",
+          "Developed data pipelines for MySQL integration",
+          "Ensured data integrity during complex database transitions"
+        ]
+      },
+      {
+        "heading": "Career Transition",
+        "paragraphs": [
+          "After completing my contract at Uber, I made a deliberate career pivot to focus on learning ReactJS. This decision led me to transition into a YouTube career teaching ReactJS and later NextJS, allowing me to share my knowledge with the developer community while exploring modern frontend technologies.",
+          "While my time at Uber was relatively brief and focused on database migration work, it served as an important bridge between my sailing sabbatical and my subsequent career as a developer educator."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "UpperDeck",
+    "slug": "upperdeck",
+    "role": "Software Engineer",
+    "from": "2003",
+    "to": "2005",
+    "highlights": [
+      "Maintained PostgreSQL systems for Marvel Vs platform",
+      "Developed complex SQL queries/stored procedures",
+      "Optimized database performance through indexing",
+      "Built interactive UI with JavaScript/CSS",
+      "Implemented drag-and-drop card management",
+      "Created cutting-edge responsive layouts"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "At UpperDeck, I was part of the team that built the online companion for their Marvel Vs card game. This web application enhanced the physical card game experience by providing digital tools and community features."
+        ]
+      },
+      {
+        "heading": "Technical Contributions",
+        "paragraphs": [
+          "The project utilized a mixed technology stack of ASP.NET (VB.NET), PERL scripts, and PostgreSQL. This was my first professional experience with PostgreSQL, which became a foundational skill in my career."
+        ]
+      },
+      {
+        "heading": "Database Engineering",
+        "paragraphs": [
+          "Maintained PostgreSQL database systems for the Marvel Vs online platform",
+          "Developed complex SQL queries and stored procedures to support game mechanics",
+          "Optimized database performance through strategic table indexing"
+        ]
+      },
+      {
+        "heading": "Frontend Development",
+        "paragraphs": [
+          "Contributed to the UI system using client-side JavaScript and CSS",
+          "Implemented advanced drag-and-drop functionality for card management",
+          "Built responsive layouts using CSS techniques that were cutting-edge for the time"
+        ]
+      },
+      {
+        "heading": "Career Development",
+        "paragraphs": [
+          "This role at UpperDeck was significant in my career development, as it introduced me to PostgreSQL and advanced my skills in building interactive web applications. The experience of working on a digital companion for a physical product also provided valuable insights into creating cohesive cross-platform user experiences."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Various Startups",
+    "slug": "various-startups",
+    "role": "Ruby on Rails Developer",
+    "from": "2006",
+    "to": "2012",
+    "highlights": [
+      "Built multiple e-commerce platforms",
+      "Developed WoW-competitive community system",
+      "Lived intense startup lifestyle in SF/LA",
+      "Mastered Ruby on Rails capabilities",
+      "Learned business/marketing essentials",
+      "Work-hard-play-hard lifestyle balance"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "For about six years, I rode the startup rollercoaster, working with Ruby on Rails across numerous ventures in San Francisco and Los Angeles. This period was defined by intense work, adventurous living, and watching startup after startup ultimately fail despite our best engineering efforts."
+        ]
+      },
+      {
+        "heading": "Technical Projects",
+        "paragraphs": [
+          "During this time, I built countless e-commerce platforms and online stores. One of my most ambitious projects was a game community management system in Newport Beach that aimed to compete with World of Warcraft's community software. These projects pushed the boundaries of what Ruby on Rails could accomplish at the time."
+        ]
+      },
+      {
+        "heading": "Startup Life",
+        "paragraphs": [
+          "Worked crazy hours, often sleeping on beaches or in offices",
+          "Built e-commerce platforms and gaming community systems with Ruby on Rails",
+          "Spent nights surfing and driving to Big Bear to snowboard"
+        ]
+      },
+      {
+        "heading": "Work Hard, Play Hard",
+        "paragraphs": [
+          "This period embodied the 'Work Hard, Play Hard' ethos that defined early startup culture. I would code intensively for days, then recharge by surfing or making impromptu trips to Big Bear for snowboarding. The lifestyle was unsustainable but exhilarating—a formative experience that shaped my approach to work-life balance in later years."
+        ]
+      },
+      {
+        "heading": "Business Lessons",
+        "paragraphs": [
+          "Perhaps the most valuable takeaway from these years was understanding that technical excellence alone doesn't ensure success. I witnessed firsthand how even the most brilliant engineering teams could fail if the business and marketing sides didn't get a break. This lesson in holistic business thinking has informed my approach to projects throughout my career.",
+          "While none of my stock options ever amounted to anything financially, the experiences, skills, and perspectives I gained during this period were invaluable. I had the time of my life, building my technical expertise while living an adventure that few developers get to experience."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "X",
+    "slug": "x",
+    "role": "Software Engineer (Contract)",
+    "from": "2003",
+    "to": "2003",
+    "highlights": [
+      "Developed pre-PayPal payment system with PERL",
+      "Worked 60+ hour weeks in high-intensity environment",
+      "Experienced Elon Musk's leadership influence",
+      "Learned about project ephemerality in tech",
+      "Developed extreme work ethic standards"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "I worked at X for a brief but intense 3-month contract period between my roles at Intel and UpperDeck. This short-term position provided valuable lessons about startup culture and the ephemeral nature of software projects."
+        ]
+      },
+      {
+        "heading": "Project Focus",
+        "paragraphs": [
+          "Though I worked in an adjunct office and never met Elon Musk personally, his leadership style profoundly shaped the company culture and my work ethic. Even in those early days when he was relatively unknown, he was something of a Steve Jobs figure to the team—elusive but influential."
+        ]
+      },
+      {
+        "heading": "Startup Culture & Work Ethic",
+        "paragraphs": [
+          "Worked 60+ hour weeks in high-intensity startup environment",
+          "Occasionally slept under desk to maximize productivity",
+          "Developed PERL-based payment processing systems"
+        ]
+      },
+      {
+        "heading": "Leadership Influence",
+        "paragraphs": [
+          "Though never meeting Elon Musk directly, his demanding leadership style shaped company culture. Brutally direct company-wide emails created high-performance standards that I found refreshing compared to corporate environments.",
+          "His occasional company-wide emails, which could be brutally direct about performance expectations, created an environment of high standards. Rather than being discouraged by this approach, I found it refreshing after coming from larger corporate environments. His uncompromising drive for excellence reinforced my belief that dedication and work ethic are paramount in the tech industry."
+        ]
+      },
+      {
+        "heading": "Key Takeaways",
+        "paragraphs": [
+          "My brief time at X taught me two critical lessons that have stayed with me throughout my career.",
+          "Software projects can be ephemeral, with even promising initiatives sometimes being canceled before completion.",
+          "Nothing trumps drive and dedication—the willingness to put in extraordinary effort often separates successful engineers from the rest."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "YouTube",
+    "slug": "youtube",
+    "role": "Web Developer (Contract)",
+    "from": "2005",
+    "to": "2006",
+    "highlights": [
+      "Developed YouTube's original comment system",
+      "Worked with PERL and Ruby during explosive growth",
+      "Adapted open source Bulletin Board systems",
+      "Learned scaling principles from senior engineers",
+      "Pivoted career focus to Ruby development"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "At YouTube, I contributed to the development of the original comment system, which was built on an open source Bulletin Board framework. While the project primarily used PERL, I had opportunities to write Ruby scripts, which aligned with my growing interest in the language at that time."
+        ]
+      },
+      {
+        "heading": "Technical Contributions",
+        "paragraphs": [
+          "The comment system we developed needed to handle rapidly growing user engagement as YouTube's popularity exploded. Working with this early social media feature provided valuable insights into building user-generated content systems that could scale effectively."
+        ]
+      },
+      {
+        "heading": "Key Experiences",
+        "paragraphs": [
+          "Developed components for YouTube's original comment system",
+          "Worked with PERL and Ruby in high-growth environment",
+          "Adapted open source Bulletin Board systems for video commenting"
+        ]
+      },
+      {
+        "heading": "Learning from Senior Engineers",
+        "paragraphs": [
+          "While my day-to-day responsibilities were relatively straightforward, the experience was invaluable due to the exceptional senior engineers I worked alongside. These talented individuals taught me principles of building large-scale web systems that could handle massive user growth—knowledge that would prove essential throughout my career.",
+          "Observing how these experienced engineers approached problems, designed solutions, and implemented scalable architectures provided practical education that complemented my technical skills. Their mentorship, though informal, significantly influenced my approach to software development."
+        ]
+      },
+      {
+        "heading": "Career Direction",
+        "paragraphs": [
+          "When my contract concluded, I made the decision to pursue opportunities more focused on Ruby development, which had become my primary language of interest. This transition marked an important step in my career journey, as I began to more deliberately shape my professional path around technologies I was passionate about."
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Zooly AI",
+    "slug": "zooly-ai",
+    "role": "Sr. Web Developer & Voice Synthesis Lead",
+    "from": "2024",
+    "to": "2025",
+    "website": "https://zooly.ai",
+    "highlights": [
+      "Led voice synthesis team replicating celebrity voices (Snoop Dogg, 50 Cent, Cardi B, etc.)",
+      "Created \"AI or Not?\" testing system with feedback loop",
+      "Developed custom tuning system for ElevenLabs integration",
+      "Implemented parameter optimization algorithms",
+      "Built custom post-processing filters",
+      "Used React/JavaScript/TailwindCSS/AWS stack"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "I was initially hired at Zooly AI as a Senior Web Developer, leveraging my extensive experience with React, JavaScript, TailwindCSS, and AWS services (including Lambda, S3, and more). However, after the team discovered my machine learning expertise, my role quickly evolved."
+        ]
+      },
+      {
+        "heading": "Voice Synthesis Leadership",
+        "paragraphs": [
+          "I was appointed to lead the voice synthesis teams, where I built and trained sophisticated voice models and datasets to replicate the voices of several high-profile celebrities.",
+          "Snoop Dogg, 50 Cent, Cardi B, Bailey Zimmerman, Donald Trump, Dr. Dre"
+        ]
+      },
+      {
+        "heading": "Innovative Testing: \"AI or Not?\"",
+        "paragraphs": [
+          "I pioneered a novel approach to test our voice models in an unbiased way. The system, which I called 'AI or Not?', presented users with various audio samples and challenged them to determine whether each sample was generated by AI or was an authentic recording.",
+          "I implemented a sophisticated feedback system that collected user responses from the 'AI or Not?' tests and fed this data directly back into our training pipeline. This continuous improvement loop allowed us to systematically identify and eliminate audio artifacts that were giving away the AI-generated nature of our samples, resulting in increasingly natural-sounding voice synthesis."
+        ]
+      },
+      {
+        "heading": "Technical Innovations",
+        "paragraphs": [
+          "Feedback loop system for model improvement",
+          "Fine-tuning methodology for artifact elimination",
+          "Custom ElevenLabs integration tuning system"
+        ]
+      },
+      {
+        "heading": "ElevenLabs Integration Enhancement",
+        "paragraphs": [
+          "Developed specialized tuning system surpassing standard implementations:",
+          "Parameter optimization algorithms based on voice characteristics",
+          "Custom post-processing filters for naturalness",
+          "Voice-specific tuning profiles for maximum quality"
+        ]
+      },
+      {
+        "heading": "Conclusion",
+        "paragraphs": [
+          "After a productive year at Zooly AI, I decided to resign from my position. I continue to wish the team the best of luck in their future endeavors and innovations in the AI space."
+        ]
+      }
+    ]
+  }
+]

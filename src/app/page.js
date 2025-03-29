@@ -4,8 +4,15 @@ import Pill from "@/ui/pill";
 import CTAButton from "@/ui/cta-button";
 import AwardWinner from "@/ui/award-winner";
 import Codementor from "@/ui/codementor";
+import skillsData from "@/data/skills.json";
 
 export default function Home() {
+  // Define available colors to cycle through
+  const colors = ['green', 'purple', 'teal', 'orange'];
+
+  // Function to get color based on index
+  const getCategoryColor = (index) => colors[index % colors.length];
+
   return (
     <div className="flex min-h-screen flex-col items-center justify-center">
       <div className="container">
@@ -13,59 +20,20 @@ export default function Home() {
         <h2>I have 28 years experience as professional software developer.</h2>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8 mb-12 w-full max-w-2xl mx-auto">
-          <CTAButton href="/why-hire-me" color="teal">
-            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+          <CTAButton href="/why-hire-me" color=" teal">
+            <svg className="w-5 h-5" fill=" none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin=" round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
             </svg>
             <span>WHY HIRE ME?</span>
           </CTAButton>
-        </div>
-
-
-
-        <div className="flex flex-col w-full max-w-5xl my-4 md:my-6 gap-4 border border-white/10 p-4 md:p-6 rounded-lg my-8">
-          <div className="flex flex-wrap gap-2 md:gap-3 justify-center my-4">
-            <span className="w-full text-center text-sm text-white/70 mb-1">Web Development:</span>
-            <Pill href="/i-know/react-js" color="green">ReactJS</Pill>
-            <Pill href="/i-know/next-js" color="green">NextJS</Pill>
-            <Pill href="/i-know/javascript" color="green">JavaScript</Pill>
-            <Pill href="/i-know/typescript" color="green">Typescript</Pill>
-            <Pill href="/i-know/tailwind-css" color="green">TailwindCSS</Pill>
-            <Pill href="/i-know/python" color="green">Python</Pill>
-            <Pill href="/i-know/aws-s3" color="green">AWS S3</Pill>
-            <Pill href="/i-know/aws-lambda" color="green">AWS Lambda</Pill>
-          </div>
-
-          <div className="flex flex-wrap gap-2 md:gap-3 justify-center my-4">
-            <span className="w-full text-center text-sm text-white/70 mb-1">AI & Machine Learning:</span>
-            <Pill href="/i-know/pytorch" color="purple">Pytorch</Pill>
-            <Pill href="/i-know/reinforcement-learning" color="purple">Reinforcement Learning</Pill>
-            <Pill href="/i-know/supervised-learning" color="purple">Supervised Learning</Pill>
-            <Pill href="/i-know/agentic-tools" color="purple">Agentic Tools</Pill>
-          </div>
-
-          <div className="flex flex-wrap gap-2 md:gap-3 justify-center my-4">
-            <span className="w-full text-center text-sm text-white/70 mb-1">Databases:</span>
-            <Pill href="/i-know/mongodb" color="teal">MonogDB</Pill>
-            <Pill href="/i-know/postgresql" color="teal">Postgresql</Pill>
-            <Pill href="/i-know/pinecone" color="teal">Pinecone</Pill>
-            <Pill href="/i-know/mysql" color="teal">MySQL</Pill>
-          </div>
-
-          <div className="flex flex-wrap gap-2 md:gap-3 justify-center my-4">
-            <span className="w-full text-center text-sm text-white/70 mb-1">Tools:</span>
-            <Pill href="/i-know/cursor" color="orange">Cursor</Pill>
-            <Pill href="/i-know/photoshop" color="orange">Photoshop</Pill>
-            <Pill href="/i-know/ableton-live" color="orange">Ableton Live</Pill>
-            <Pill href="/i-know/unity" color="orange">Unity</Pill>
-          </div>
-        </div>
-      </div>
+        </div >
+      </div >
 
       <div className="w-full max-w-3xl mx-auto mb-12 space-y-8">
         <AwardWinner />
         <Codementor />
       </div>
+
 
       <div className="flex flex-col md:flex-row w-full max-w-5xl gap-8 my-8">
         <div className="flex-1 min-w-0">
@@ -86,9 +54,30 @@ export default function Home() {
 
             <p>I also tend to run models like Qwen and DeepSeek locally to save on the cost of running them on the cloud. This also provides me with more control and privacy, both things I value.</p>
           </Card>
-        </div>
+        </div >
 
+      </div >
 
+      <div className="flex flex-col w-full max-w-5xl my-4 md:my-6 gap-4 border border-white/10 p-4 md:p-6 rounded-lg my-8">
+        {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
+          skills.length > 0 && (
+            <div key={category} className="flex flex-wrap gap-2 md:gap-3 justify-center my-4">
+              <span className="w-full text-center text-sm text-white/70 mb-1">{category}:</span>
+              {skills.map((skill, index) => {
+                const skillSlug = skill.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-').replace(/#/g, 'sharp');
+                return (
+                  <Pill
+                    key={index}
+                    href={`/i-know/${skillSlug}`}
+                    color={getCategoryColor(categoryIndex)}
+                  >
+                    {skill}
+                  </Pill>
+                );
+              })}
+            </div>
+          )
+        ))}
       </div>
 
       <div className="flex flex-col md:flex-row w-full max-w-5xl gap-8 my-8">
@@ -110,37 +99,37 @@ export default function Home() {
 
             <p>You will not experience this sort of waste with me. My goal is not to just do things right the first time, but to constantly try and find ways to save time and money. After all, if the company I work for is burning money for no good reason... I won't be employed for long.</p>
           </Card>
-        </div>
-      </div>
+        </div >
+      </div >
 
-      <div className="w-full max-w-5xl my-12">
+      <div className="w-full max-w-5xl my-16">
         <h3 className="text-center mb-8">Some Companies I've Coded For</h3>
 
         <div className="flex flex-wrap gap-3 md:gap-4 justify-center border border-white/10 p-6 rounded-lg">
           <Pill href="/companies-ive-worked-for/intel" color="green">Intel</Pill>
           <Pill href="/companies-ive-worked-for/upperdeck" color="purple">UpperDeck</Pill>
           <Pill href="/companies-ive-worked-for/callaway-golf" color="teal">Callaway Golf</Pill>
-          <Pill href="/companies-ive-worked-for/geico" color="orange">GEICO</Pill>
-          <Pill href="/companies-ive-worked-for/x" color="green">X</Pill>
-          <Pill href="/companies-ive-worked-for/youtube" color="purple">YouTube</Pill>
-          <Pill href="/companies-ive-worked-for/uber" color="teal">Uber</Pill>
-          <Pill href="/companies-ive-worked-for/codementor" color="orange">CodeMentor</Pill>
-          <Pill href="/companies-ive-worked-for/devmentor-live" color="green">DevmentorLive</Pill>
-          <Pill href="/companies-ive-worked-for/zooly-ai" color="purple">ZoolyAI</Pill>
-        </div>
+          <Pill Pill href="/companies-ive-worked-for/geico" color="orange">GEICO</Pill>
+          <Pill Pill href="/companies-ive-worked-for/x" color="green">X</Pill>
+          <Pill Pill href="/companies-ive-worked-for/youtube" color="purple">YouTube</Pill>
+          <Pill Pill href="/companies-ive-worked-for/uber" color="teal">Uber</Pill>
+          <Pill Pill href="/companies-ive-worked-for/codementor" color="orange">CodeMentor</Pill>
+          <Pill Pill href="/companies-ive-worked-for/devmentor-live" color="green">DevmentorLive</Pill>
+          < Pill href="/companies-ive-worked-for/zooly-ai" color="purple">ZoolyAI</Pill>
+        </div >
 
 
-      </div>
+      </div >
 
       <div className="w-full max-w-5xl my-12">
 
-        <CTAButton href="/contact" color="green">
-          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
-          </svg>
-          <span>CONTACT ME!</span>
-        </CTAButton></div>
+        <CTAButton href="/contact" color=" green">
+          <svg className="w-5 h-5" fill=" none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin=" round" strokeWidth="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+          </svg >
+          <span>Want to work with me? Click here to contact me!</span>
+        </CTAButton ></div >
 
-    </div>
+    </div >
   );
 }

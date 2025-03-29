@@ -4,20 +4,21 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && npm run build:sitemap",
+    "build": "next build && npm run build:sitemap && npm run build:resume",
     "build:sitemap": "node scripts/build-sitemap.js",
     "build:resume": "node scripts/build-resume.js",
-    "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
+    "@pdf-lib/fontkit": "^1.1.1",
     "@tailwindcss/line-clamp": "^0.4.4",
     "@tailwindcss/typography": "^0.5.16",
     "glob": "^11.0.1",
     "next": "15.2.4",
+    "nodemailer": "^6.9.16",
+    "pdf-lib": "^1.17.1",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "nodemailer": "^6.9.16"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",

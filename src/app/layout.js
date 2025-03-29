@@ -1,19 +1,20 @@
-import { Instrument_Sans, Merriweather } from "next/font/google";
+import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/ui/header";
 import Footer from "@/ui/footer";
 
 import { generateSeoMetadata } from '@/lib/seo-utils';
 
-const instrumentSans = Instrument_Sans({
+const quicksand = Quicksand({
   subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
   variable: "--font-sans",
 });
 
-const merriweather = Merriweather({
+const quicksandTitle = Quicksand({
   subsets: ["latin"],
-  weight: ["400", "700", "900"],
-  variable: "--font-serif",
+  weight: ["500", "600", "700"],
+  variable: "--font-title",
 });
 
 export const metadata = generateSeoMetadata({
@@ -35,7 +36,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${instrumentSans.variable} ${merriweather.variable} antialiased flex flex-col min-h-screen`}
+        className={`${quicksand.variable} ${quicksandTitle.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
         <main className="flex-grow max-w-full">{children}</main>

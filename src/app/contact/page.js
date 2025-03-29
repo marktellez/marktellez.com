@@ -194,8 +194,8 @@ export default function ContactPage() {
             type="submit"
             disabled={isSubmitting || !isFormValid()}
             className={`px-6 py-3 text-white font-medium rounded-md transition-colors w-full flex justify-center items-center ${isFormValid()
-                ? 'bg-green-600 hover:bg-green-700'
-                : 'bg-green-600/50 cursor-not-allowed'
+              ? 'bg-green-600 hover:bg-green-700'
+              : 'bg-green-600/50 cursor-not-allowed'
               }`}
           >
             {isSubmitting ? (

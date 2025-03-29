@@ -14,15 +14,15 @@ export default function ReactUYoutubePage() {
 
         <div className="prose prose-lg prose-invert max-w-none">
           <p className="text-gray-300">
-            After my contract at Uber, I decided to monetize my skills by creating a YouTube channel focused on teaching 
-            JavaScript, ReactJS, NextJS, and MongoDB. This entrepreneurial venture allowed me to build an audience while 
+            After my contract at Uber ended, I decided to monetize my skills by creating a YouTube channel focused on teaching
+            JavaScript, ReactJS, NextJS, and MongoDB. This entrepreneurial venture allowed me to build an audience while
             deepening my expertise in modern web development technologies.
           </p>
 
           <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Channel Growth</h2>
           <p className="text-gray-300">
-            Operating from my apartment in Mexico City, I grew the channel to 33,000 subscribers and generated approximately 
-            $7,000 monthly in revenue. This experience taught me valuable lessons about content creation, audience building, 
+            Operating from my apartment in Mexico City, I grew the channel to 33,000 subscribers and generated approximately
+            $7,000 monthly in revenue. This experience taught me valuable lessons about content creation, audience building,
             and the business aspects of technical education.
           </p>
 
@@ -52,26 +52,26 @@ export default function ReactUYoutubePage() {
 
           <h2 className="text-2xl font-semibold text-white mt-8 mb-4">Business Insights</h2>
           <p className="text-gray-300">
-            The YouTube channel served as both a technical and business education. I learned crucial lessons about 
-            revenue generation, audience development, and professional networking in the tech industry. These skills 
+            The YouTube channel served as both a technical and business education. I learned crucial lessons about
+            revenue generation, audience development, and professional networking in the tech industry. These skills
             proved valuable in my later entrepreneurial ventures and technical leadership roles.
           </p>
 
           <p className="text-gray-300 mt-4">
-            Creating high-quality educational content required deep understanding of the technologies I taught, pushing 
+            Creating high-quality educational content required deep understanding of the technologies I taught, pushing
             me to master React and JavaScript ecosystems while developing effective teaching methodologies.
           </p>
 
           <h2 className="text-2xl font-semibold text-white mt-8 mb-4">New Horizons</h2>
           <p className="text-gray-300">
-            While the channel was successful, I eventually recognized that the significant time investment required for 
-            content creation was limiting my ability to explore new technical domains. I had begun developing interest in 
-            machine learning, particularly genetic algorithms, and decided to pivot my career to pursue these emerging 
+            While the channel was successful, I eventually recognized that the significant time investment required for
+            content creation was limiting my ability to explore new technical domains. I had begun developing interest in
+            machine learning, particularly genetic algorithms, and decided to pivot my career to pursue these emerging
             technologies.
           </p>
 
           <p className="text-gray-300 mt-4">
-            This transition marked an important evolution in my technical journey, as I moved from frontend development 
+            This transition marked an important evolution in my technical journey, as I moved from frontend development
             education to exploring the fascinating world of artificial intelligence and machine learning.
           </p>
         </div>

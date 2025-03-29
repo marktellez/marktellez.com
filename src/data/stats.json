@@ -1,0 +1,11 @@
+{
+  "name": "Mark Tellez",
+  "age": 41,
+  "photo": "/marktellez.jpg",
+  "website": "https://marktellez.com/",
+  "bio": "I am a Sr. Software Engineer and AI Engineer with over 20 years of experience in the industry. I have worked on a wide range of projects, from small startups to large enterprises. My expertise lies in building scalable and maintainable software systems using modern technologies such as React, Node.js, and Python.",
+  "fiveStarReviews": 454,
+  "contactEmail": "mark@devmentor.live",
+  "title": "Sr. Software Engineer & AI Engineer",
+  "other": "I build solar and bio-gas systems, and I raise animals and grow crops off grid."
+}

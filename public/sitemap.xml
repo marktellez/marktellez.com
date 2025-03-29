@@ -30,6 +30,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/resume"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/vector-databases</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/vector-databases"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/unity</loc>
     <lastmod>2025-03-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -98,13 +105,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/postgresql"/>
-  </url>
-  <url>
-    <loc>https://marktellez.com/i-know/pinecone</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/pinecone"/>
   </url>
   <url>
     <loc>https://marktellez.com/i-know/photoshop</loc>
@@ -282,13 +282,6 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/companies-ive-worked-for/zooly-ai"/>
   </url>
   <url>
-    <loc>https://marktellez.com/i-know/csharp</loc>
-    <lastmod>2025-03-29</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/csharp"/>
-  </url>
-  <url>
     <loc>https://marktellez.com/i-know/javascript</loc>
     <lastmod>2025-03-29</lastmod>
     <changefreq>weekly</changefreq>
@@ -315,6 +308,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/typescript"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/csharp</loc>
+    <lastmod>2025-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/csharp"/>
   </url>
   <url>
     <loc>https://marktellez.com/i-know/asp-net</loc>

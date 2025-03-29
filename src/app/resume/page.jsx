@@ -1,38 +1,17 @@
 import Link from 'next/link';
 import Pill from '@/ui/pill';
 import ResumeNavigation from '@/ui/resume-navigation';
-import skillsData from '@/data/skills.json';
 import resumeData from '@/data/resume.json';
 import reviewsData from '@/data/reviews.json';
+import SkillPills from '@/ui/skill-pills';
 
 async function getResumeData() {
-  // Process skills data
-  const processedSkills = [];
-  const colors = ['blue', 'purple', 'teal', 'green', 'orange'];
-
-  let colorIndex = 0;
-  Object.entries(skillsData).forEach(([category, skills]) => {
-    const color = colors[colorIndex % colors.length];
-    colorIndex++;
-
-    skills.forEach(skill => {
-      const skillSlug = skill.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-').replace(/#/g, 'sharp');
-      processedSkills.push({
-        category,
-        name: skill,
-        url: `/i-know/${skillSlug}`,
-        color
-      });
-    });
-  });
-
   // Filter reviews with at least 200 characters
   const filteredReviews = reviewsData.filter(review =>
     review.content && review.content.length >= 200
   );
 
   return {
-    skills: processedSkills,
     companies: resumeData,
     reviews: filteredReviews
   };
@@ -40,18 +19,6 @@ async function getResumeData() {
 
 export default async function ResumePage() {
   const data = await getResumeData();
-
-  // Get unique categories from skills
-  const categories = [...new Set(data.skills.map(skill => skill.category))];
-
-  // Group skills by category
-  const skillsByCategory = data.skills.reduce((acc, skill) => {
-    if (!acc[skill.category]) {
-      acc[skill.category] = [];
-    }
-    acc[skill.category].push(skill);
-    return acc;
-  }, {});
 
   return (
     <div className="max-w-5xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
@@ -63,33 +30,7 @@ export default async function ResumePage() {
       {/* Skills Section */}
       <section id="skills" className="mb-16 scroll-mt-20">
         <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-700">Skills & Expertise</h2>
-
-        <div className="space-y-8">
-          {categories.map((category) => {
-            const skills = skillsByCategory[category] || [];
-            if (skills.length === 0) return null;
-
-            // Get the color from the first skill in this category
-            const categoryColor = skills[0]?.color || 'blue';
-
-            return (
-              <div key={category} className="my-16">
-                <h3 className={`text-xl font-semibold mb-4 text-${categoryColor}-400 text-center`}>{category}</h3>
-                <div className="flex flex-wrap gap-3 justify-center">
-                  {skills.map((skill, index) => (
-                    <Pill
-                      key={index}
-                      href={skill.url}
-                      color={skill.color}
-                    >
-                      {skill.name}
-                    </Pill>
-                  ))}
-                </div>
-              </div>
-            );
-          })}
-        </div>
+        <SkillPills />
       </section>
 
       {/* Work Experience Section */}

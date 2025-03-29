@@ -1,0 +1,247 @@
+{
+  "javascript": {
+    "name": "JavaScript",
+    "category": "Programming Languages",
+    "hasPage": true
+  },
+  "python": {
+    "name": "Python",
+    "category": "Programming Languages",
+    "hasPage": true
+  },
+  "ruby": {
+    "name": "Ruby",
+    "category": "Programming Languages",
+    "hasPage": true
+  },
+  "typescript": {
+    "name": "TypeScript",
+    "category": "Programming Languages",
+    "hasPage": false
+  },
+  "csharp": {
+    "name": "C#",
+    "category": "Programming Languages",
+    "hasPage": false
+  },
+  "asp-net": {
+    "name": "ASP.NET",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "css": {
+    "name": "CSS",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "django": {
+    "name": "Django",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "nextjs": {
+    "name": "NextJS",
+    "category": "Web Development",
+    "hasPage": true
+  },
+  "reactjs": {
+    "name": "ReactJS",
+    "category": "Web Development",
+    "hasPage": true
+  },
+  "nodejs": {
+    "name": "NodeJS",
+    "category": "Web Development",
+    "hasPage": true
+  },
+  "tailwindcss": {
+    "name": "TailwindCSS",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "ruby-on-rails": {
+    "name": "Ruby on Rails",
+    "category": "Web Development",
+    "hasPage": true
+  },
+  "seo": {
+    "name": "SEO",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "jest": {
+    "name": "Jest",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "mongodb": {
+    "name": "MongoDB",
+    "category": "Databases",
+    "hasPage": true
+  },
+  "mysql": {
+    "name": "MySQL",
+    "category": "Databases",
+    "hasPage": true
+  },
+  "postgresql": {
+    "name": "PostgreSQL",
+    "category": "Databases",
+    "hasPage": true
+  },
+  "vector-databases": {
+    "name": "Vector Databases",
+    "category": "Databases",
+    "hasPage": true
+  },
+  "cnns": {
+    "name": "CNNs",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "gans": {
+    "name": "GANs",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "machine-learning": {
+    "name": "Machine Learning",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "supervised-learning": {
+    "name": "Supervised Learning",
+    "category": "Machine Learning & AI",
+    "hasPage": true
+  },
+  "transformers": {
+    "name": "Transformers",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "pytorch": {
+    "name": "Pytorch",
+    "category": "Machine Learning & AI",
+    "hasPage": true
+  },
+  "scikit-learn": {
+    "name": "Scikit-learn",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "reinforcement-learning": {
+    "name": "Reinforcement Learning",
+    "category": "Machine Learning & AI",
+    "hasPage": true
+  },
+  "large-language-models": {
+    "name": "Large Language Models",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "model-distillation": {
+    "name": "Model Distillation",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "transfer-learning": {
+    "name": "Transfer Learning",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "agentic-systems": {
+    "name": "Agentic Systems",
+    "category": "Machine Learning & AI",
+    "hasPage": false
+  },
+  "aws-cloud-services": {
+    "name": "AWS Cloud Services",
+    "category": "Cloud & DevOps",
+    "hasPage": false
+  },
+  "aws-lambda": {
+    "name": "AWS Lambda",
+    "category": "Cloud & DevOps",
+    "hasPage": true
+  },
+  "aws-s3": {
+    "name": "AWS S3",
+    "category": "Cloud & DevOps",
+    "hasPage": true
+  },
+  "docker": {
+    "name": "Docker",
+    "category": "Cloud & DevOps",
+    "hasPage": false
+  },
+  "linux": {
+    "name": "Linux",
+    "category": "Cloud & DevOps",
+    "hasPage": false
+  },
+  "serverless-development": {
+    "name": "Serverless Development",
+    "category": "Cloud & DevOps",
+    "hasPage": false
+  },
+  "systems-scaling": {
+    "name": "Systems Scaling",
+    "category": "Cloud & DevOps",
+    "hasPage": false
+  },
+  "bash-scripting": {
+    "name": "Bash Scripting",
+    "category": "Cloud & DevOps",
+    "hasPage": false
+  },
+  "elevenlabs": {
+    "name": "ElevenLabs",
+    "category": "Audio/Speech Technologies",
+    "hasPage": false
+  },
+  "voice-synthesis": {
+    "name": "Voice Synthesis",
+    "category": "Audio/Speech Technologies",
+    "hasPage": false
+  },
+  "automatic-speech-recognition": {
+    "name": "Automatic Speech Recognition",
+    "category": "Audio/Speech Technologies",
+    "hasPage": false
+  },
+  "sound-synthesis": {
+    "name": "Sound Synthesis",
+    "category": "Audio/Speech Technologies",
+    "hasPage": false
+  },
+  "audio-mixing": {
+    "name": "Audio Mixing",
+    "category": "Audio/Speech Technologies",
+    "hasPage": false
+  },
+  "photoshop": {
+    "name": "Photoshop",
+    "category": "Creative Tools",
+    "hasPage": true
+  },
+  "illustrator": {
+    "name": "Illustrator",
+    "category": "Creative Tools",
+    "hasPage": false
+  },
+  "figma": {
+    "name": "Figma",
+    "category": "Creative Tools",
+    "hasPage": false
+  },
+  "unity": {
+    "name": "Unity",
+    "category": "Creative Tools",
+    "hasPage": true
+  },
+  "ableton-live": {
+    "name": "Ableton Live",
+    "category": "Creative Tools",
+    "hasPage": true
+  }
+}

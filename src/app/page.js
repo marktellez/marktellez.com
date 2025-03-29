@@ -4,7 +4,7 @@ import Pill from "@/ui/pill";
 import CTAButton from "@/ui/cta-button";
 import AwardWinner from "@/ui/award-winner";
 import Codementor from "@/ui/codementor";
-import skillsData from "@/data/skills.json";
+import SkillPills from "@/ui/skill-pills";
 
 export default function Home() {
   // Define available colors to cycle through
@@ -47,7 +47,7 @@ export default function Home() {
         </div>
 
         <div className="flex-1 min-w-0">
-          <Card color="purple" title="I Build Custom ML Models" imageUrl={"/models.png"}>
+          <Card color="purple" title="I Build Custom ML Models" imageUrl="/models.png">
             <p>I started my AI/ML journey quite a few years back when I got interested in Reinforcement Learning and the writings of Rich Sutton, and within a year I placed 8th out of 5000 developers in the world.</p>
 
             <p>I run 2 RTX 4090s in my development box that I hand built. With this firepower I can run diffusion models for generating graphics and 3d models, agents that run autonomously to accomplish my goals while I work on other things.</p>
@@ -58,31 +58,11 @@ export default function Home() {
 
       </div >
 
-      <div className="flex flex-col w-full max-w-5xl my-4 md:my-6 gap-4 border border-white/10 p-4 md:p-6 rounded-lg my-8">
-        {Object.entries(skillsData).map(([category, skills], categoryIndex) => (
-          skills.length > 0 && (
-            <div key={category} className="flex flex-wrap gap-2 md:gap-3 justify-center my-4">
-              <span className="w-full text-center text-sm text-white/70 mb-1">{category}:</span>
-              {skills.map((skill, index) => {
-                const skillSlug = skill.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-').replace(/#/g, 'sharp');
-                return (
-                  <Pill
-                    key={index}
-                    href={`/i-know/${skillSlug}`}
-                    color={getCategoryColor(categoryIndex)}
-                  >
-                    {skill}
-                  </Pill>
-                );
-              })}
-            </div>
-          )
-        ))}
-      </div>
+      <SkillPills className="max-w-5xl my-4 md:my-6" />
 
       <div className="flex flex-col md:flex-row w-full max-w-5xl gap-8 my-8">
         <div className="flex-1 min-w-0">
-          <Card color="green" title="I Superpower My Teams" imageUrl={"/teams.png"}>
+          <Card color="green" title="I Superpower My Teams" imageUrl="/teams.png">
             <p>I have spent years of my career focusing on training and mentoring Mid and Jr. level developers. I love to help people grow into better programmers, distilling the years and dozens of books into real-world lessons.</p>
 
             <p>I know not everyone has had the time to read and digest what I have, nor had the wonderfully enriching experience of havin great mentors like Douglas Crockford and Jim Weirich. So it's my mission to share what has been revealed to me.</p>
@@ -92,7 +72,7 @@ export default function Home() {
         </div>
 
         <div className="flex-1 min-w-0">
-          <Card color="purple" title="Revenue: My Favorite Metric" imageUrl={"/revenue.png"}>
+          <Card color="purple" title="Revenue: My Favorite Metric" imageUrl="/revenue.png">
             <p>So many programmers and employees in general really dont understand or care that much about revenue. Something that I find abhorrent. Maybe its because I am self taught and have been working since I was 17.</p>
 
             <p>Time after time I see people wasting time on things that don't matter and developers keeping quiet when there is an issue that should be raised instead of bringing up and looking for an efficient way to fix the problem.</p>

@@ -1,10 +1,10 @@
 {
     "Programming Languages": [
-        "C#",
         "JavaScript",
         "Python",
         "Ruby",
-        "TypeScript"
+        "TypeScript",
+        "C#"
     ],
     "Web Development": [
         "ASP.NET",

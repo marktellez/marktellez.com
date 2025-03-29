@@ -4,9 +4,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
-    "build": "next build && npm run build:sitemap && npm run build:resume",
+    "build": "next build && npm run build:sitemap && npm run build:resume && npm run build:skill-pages",
     "build:sitemap": "node scripts/build-sitemap.js",
     "build:resume": "node scripts/build-resume.js",
+    "build:skill-pages": "node scripts/build-skill-pages.js",
     "lint": "next lint"
   },
   "dependencies": {

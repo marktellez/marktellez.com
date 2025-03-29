@@ -7,7 +7,8 @@ export function generateSeoMetadata({
     type = 'website',
     siteName,
     locale = 'en_US',
-    twitter = {}
+    twitter = {},
+    icons = null
 }) {
     // Fix the default image URL
     const defaultImage = `/api/og?title=${encodeURIComponent(title)}&description=${encodeURIComponent(description)}`;
@@ -28,6 +29,20 @@ export function generateSeoMetadata({
         }
     }
 
+    // Default icons configuration if not provided
+    const defaultIcons = {
+        icon: [
+            { url: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
+            { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }
+        ],
+        apple: [
+            { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }
+        ],
+        other: [
+            { rel: 'manifest', url: '/site.webmanifest' }
+        ]
+    };
+
     const metadata = {
         title: title,
         description: description,
@@ -39,7 +54,6 @@ export function generateSeoMetadata({
             description: description,
             url: normalizedUrl,
             type: type,
-            // Fix the OR operator
             images: [{ url: image || defaultImage }],
             siteName: siteName || title,
             locale: locale,
@@ -48,14 +62,13 @@ export function generateSeoMetadata({
             card: twitter.card || 'summary_large_image',
             title: title,
             description: description,
-            // Fix the array format
             images: image ? [image] : [defaultImage],
             site: twitter.site,
             creator: twitter.creator,
         },
+        icons: icons || defaultIcons,
         other: {
             'theme-color': '#fb2841',
-            'viewport': 'width=device-width, initial-scale=1',
             'robots': 'index, follow',
         }
     };

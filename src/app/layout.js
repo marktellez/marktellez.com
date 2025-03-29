@@ -35,6 +35,7 @@ export const metadata = generateSeoMetadata({
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+
       <body
         className={`${quicksand.variable} ${quicksandTitle.variable} antialiased flex flex-col min-h-screen`}
       >

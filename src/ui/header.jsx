@@ -51,9 +51,9 @@ export default function Header() {
         <nav className="sm:hidden mt-3 py-3 px-2 bg-background border-t">
           <div className="flex flex-col space-y-3">
             <Link href="/" className="text-sm font-medium hover:text-blue-600 transition-colors">Home</Link>
-            <Link href="/blog" className="text-sm font-medium hover:text-blue-600 transition-colors">Blog</Link>
-            <Link href="/about" className="text-sm font-medium hover:text-blue-600 transition-colors">About</Link>
-            <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">Contact</Link>
+            <Link href="/resume" className="text-sm font-medium hover:text-blue-600 transition-colors">My Resume</Link>
+            <Link href="/contact" className="text-sm font-medium hover:text-blue-600 transition-colors">Contact Me</Link>
+            <Link href="/testimonials" className="text-sm font-medium hover:text-blue-600 transition-colors">Testimonials</Link>
           </div>
         </nav>
       )}

@@ -2,6 +2,7 @@ import { Quicksand } from "next/font/google";
 import "./globals.css";
 import Header from "@/ui/header";
 import Footer from "@/ui/footer";
+import { Analytics } from "@vercel/analytics/react"
 
 import { generateSeoMetadata } from '@/lib/seo-utils';
 
@@ -42,6 +43,7 @@ export default function RootLayout({ children }) {
         <Header />
         <main className="flex-grow max-w-full">{children}</main>
         <Footer />
+        <Analytics />
       </body>
     </html>
   );

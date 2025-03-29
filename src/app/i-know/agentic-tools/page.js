@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Agentic Tools Expert | AI Systems Developer for Hire - Mark Tellez",
+  description: "Hire an Agentic Tools expert with extensive experience in CrewAI, LangChain, and Model Context Protocol. Building autonomous AI systems that can reason, plan, and execute complex tasks with minimal human intervention.",
+  keywords: ["Agentic Tools expert", "autonomous AI systems", "CrewAI", "LangChain", "Model Context Protocol", "multi-agent systems", "AI automation", "business process automation"],
+  url: "https://marktellez.com/i-know/agentic-tools",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function AgenticToolsSkillPage() {
   return (
     <div className="container mx-auto py-8">

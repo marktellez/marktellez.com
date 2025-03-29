@@ -2,6 +2,17 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "MongoDB Expert | Database Developer for Hire - Mark Tellez",
+  description: "Hire a MongoDB expert with enterprise-scale experience in database migrations, schema design, and cluster management. Delivering high-performance, scalable NoSQL solutions for businesses of all sizes.",
+  keywords: ["MongoDB expert", "NoSQL database developer", "database migration", "schema design", "cluster management", "performance optimization", "application integration", "enterprise solutions"],
+  url: "https://marktellez.com/i-know/mongodb",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
+
 export default function MongoDBSkillPage() {
   return (
     <div className="container mx-auto py-8">

@@ -2,6 +2,17 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Cursor AI Expert | AI-Powered Development Specialist - Mark Tellez",
+  description: "Hire a Cursor AI expert who achieves 75% productivity gains through advanced prompting techniques and AI-assisted development. Delivering rapid prototyping, complex refactoring, and accelerated project timelines.",
+  keywords: ["Cursor AI expert", "AI-assisted development", "rapid prototyping", "complex refactoring", "documentation generation", "productivity optimization", "development acceleration", "AI prompting techniques"],
+  url: "https://marktellez.com/i-know/cursor",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
+
 export default function CursorSkillPage() {
   return (
     <div className="container mx-auto py-8">

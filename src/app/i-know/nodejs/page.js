@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Node.js Expert | Backend Developer for Hire - Mark Tellez",
+  description: "Hire a Node.js expert with 10+ years of experience building scalable APIs, microservices, and real-time applications. Delivering high-performance backend solutions for modern web and mobile experiences.",
+  keywords: ["Node.js expert", "backend developer", "API development", "microservices", "real-time applications", "serverless", "performance optimization", "WebSockets"],
+  url: "https://marktellez.com/i-know/nodejs",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function NodejsSkillPage() {
   return (
     <div className="container mx-auto py-8">

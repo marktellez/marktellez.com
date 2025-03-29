@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+
+export const metadata = generateSeoMetadata({
+  title: "Unity Developer | Game & Video Production - Mark Tellez",
+  description: "Experienced Unity developer available for hire. Specializing in game development, commercial production, and film projects. Delivering high-quality interactive experiences with technical precision.", keywords: ["Unity developer", "game development", "video production", "interactive experiences", "Unity 3D", "creative development", "game design"],
+  url: "https://marktellez.com/i-know/unity",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function UnitySkillPage() {
   return (
     <div className="container mx-auto py-8">

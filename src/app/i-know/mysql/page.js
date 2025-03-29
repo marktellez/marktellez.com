@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "MySQL Expert | Database Developer for Hire - Mark Tellez",
+  description: "Hire a MySQL expert with 18+ years of experience in database optimization, high-availability clusters, and cloud deployments. Delivering robust, scalable data solutions for businesses of all sizes.",
+  keywords: ["MySQL expert", "database developer", "performance optimization", "high availability", "cloud deployment", "migration strategies", "schema design", "query optimization", "InnoDB", "MyISAM"],
+  url: "https://marktellez.com/i-know/mysql",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function MySQLSkillPage() {
   return (
     <div className="container mx-auto py-8">

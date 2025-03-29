@@ -2,6 +2,17 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "React Developer | Frontend Expert for Hire - Mark Tellez",
+  description: "Hire a React expert with 12+ years of experience building high-performance web applications. Delivering elegant, production-ready solutions with accelerated development cycles.",
+  keywords: ["React developer", "React expert", "frontend development", "web application", "UI development", "state management", "component architecture"],
+  url: "https://marktellez.com/i-know/reactjs",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
+
 export default function ReactJSSkillPage() {
   return (
     <div className="container mx-auto py-8">

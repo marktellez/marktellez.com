@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Supervised Learning Expert | ML Engineer for Hire - Mark Tellez",
+  description: "Hire an expert in Supervised Learning with proven experience in medical diagnostics, speech recognition, and NLP. Delivering production-ready ML models that solve real business problems.",
+  keywords: ["supervised learning expert", "machine learning engineer", "ML model development", "speech recognition", "medical diagnostics", "NLP", "time series forecasting"],
+  url: "https://marktellez.com/i-know/supervised-learning",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function SupervisedLearningSkillPage() {
   return (
     <div className="container mx-auto py-8">

@@ -2,6 +2,17 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Reinforcement Learning Expert | AI Engineer for Hire - Mark Tellez",
+  description: "Hire a Reinforcement Learning expert with proven experience in game-playing agents, multi-agent systems, and resource optimization. Delivering production-ready RL implementations for complex problems.",
+  keywords: ["reinforcement learning expert", "RL engineer", "deep reinforcement learning", "game-playing agents", "multi-agent systems", "resource optimization", "sim-to-real transfer"],
+  url: "https://marktellez.com/i-know/reinforcement-learning",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
+
 export default function ReinforcementLearningSkillPage() {
   return (
     <div className="container mx-auto py-8">

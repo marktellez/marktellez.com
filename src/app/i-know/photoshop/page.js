@@ -3,6 +3,16 @@ import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 import PhotoWall from '@/ui/photo-wall';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Photoshop Expert | Digital Artist for Hire - Mark Tellez",
+  description: "Hire a Photoshop expert with years of experience in photo restoration, composite creation, and digital painting. Bringing artistic vision and technical precision to your visual projects.",
+  keywords: ["Photoshop expert", "digital artist", "photo restoration", "composite creation", "digital painting", "UI/UX design", "visual storytelling", "photo editing"],
+  url: "https://marktellez.com/i-know/photoshop",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function PhotoshopSkillPage() {
   return (
     <div className="container mx-auto py-8">

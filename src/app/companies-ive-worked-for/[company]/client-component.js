@@ -1,29 +1,12 @@
 "use client"
 
-import { useEffect, useState } from 'react';
-import { useSearchParams } from 'next/navigation';
+import { useState } from 'react';
 import CTAButton from '@/ui/cta-button';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
 
-export default function CompanyPage({ params }) {
-    const [companyData, setCompanyData] = useState(null);
-    const [loading, setLoading] = useState(true);
-    const searchParams = useSearchParams();
-    const referrer = searchParams.get('referrer');
-    const cardId = searchParams.get('cardId');
-
-    useEffect(() => {
-        async function fetchData() {
-            const { company } = await params;
-            const res = await fetch(`${process.env.NEXT_PUBLIC_URL}/api/companies/${company}`);
-            const data = await res.json();
-            setCompanyData(data);
-            setLoading(false);
-        }
-
-        fetchData();
-    }, [params]);
+export default function CompanyPageClient({ initialCompanyData, params, referrer, cardId }) {
+    const [companyData] = useState(initialCompanyData);
 
     // Dynamically load the hero component if specified
     let HeroComponent = null;
@@ -32,10 +15,6 @@ export default function CompanyPage({ params }) {
             loading: () => <div className="text-center py-8">Loading...</div>,
             ssr: false,
         });
-    }
-
-    if (loading) {
-        return <div className="container mx-auto py-8 text-center">Loading...</div>;
     }
 
     return (

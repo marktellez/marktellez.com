@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Ruby on Rails Expert | Full-Stack Developer for Hire - Mark Tellez",
+  description: "Hire a Ruby on Rails expert with 18+ years of experience building scalable web applications. From startups to enterprise solutions, delivering robust and maintainable code.",
+  keywords: ["Ruby on Rails expert", "Rails developer", "full-stack development", "API development", "database optimization", "web application development", "startup technology"],
+  url: "https://marktellez.com/i-know/ruby-on-rails",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function RubyOnRailsSkillPage() {
   return (
     <div className="container mx-auto py-8">

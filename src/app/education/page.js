@@ -3,6 +3,16 @@ import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 import educationData from '@/data/education.json';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+    title: "Education & Learning Journey | Continuous Growth - Mark Tellez",
+    description: "Explore my educational background and continuous learning journey. From formal education to self-directed learning in programming, AI, and emerging technologies.",
+    keywords: ["education", "continuous learning", "self-taught programmer", "professional development", "AI education", "technical skills", "learning journey"],
+    url: "https://marktellez.com/education",
+    type: "article",
+    siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function Education() {
     const { content } = educationData;
 

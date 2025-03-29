@@ -5,6 +5,17 @@ import CTAButton from '@/ui/cta-button';
 import AwardWinner from '@/ui/award-winner';
 import Codementor from '@/ui/codementor';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+
+export const metadata = generateSeoMetadata({
+  title: "Why Hire Me - Expert Programmer and AI Engineer",
+  description: "Discover why American companies should work with me - award-winning technical skills, U.S. LLC structure, convenient timezone, and cost-effective expertise.",
+  keywords: ["hire programmer", "hire web developer", "hire ai developer", "hire machine learning expert", "hire senior engineer", "hire technical consultant", "expert developer", "senior engineer", "cost-effective developer"],
+  url: "https://marktellez.com/why-hire-me",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function WhyHireMePage() {
   return (
     <div className="container mx-auto py-8">

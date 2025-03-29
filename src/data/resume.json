@@ -621,5 +621,61 @@
         ]
       }
     ]
+  },
+  {
+    "company": "VoxBird AI",
+    "slug": "voxbird-ai",
+    "role": "AI Voice Synthesis Lead",
+    "from": "2022",
+    "to": "2024",
+    "website": "https://voxbird.ai",
+    "highlights": [
+      "Developed ensemble AI models for ultra-realistic voice synthesis",
+      "Created voice preservation technology beyond simple cloning",
+      "Built systems capturing natural breaths, pauses and speaking cadence",
+      "Implemented voice model training pipeline with 24-48 hour turnaround",
+      "Supported both English and Spanish voice generation",
+      "Designed memorial voice preservation service for deceased loved ones",
+      "Created technology that outperformed ElevenLabs for personalized voices"
+    ],
+    "content": [
+      {
+        "heading": "Introduction",
+        "paragraphs": [
+          "At VoxBird AI, I led the development of advanced voice synthesis technology that went beyond simple voice cloning. Our approach used an ensemble of specialized AI models to preserve what makes a voice uniquely human - including breaths, pauses, and natural speaking cadence."
+        ]
+      },
+      {
+        "heading": "Technical Innovation",
+        "paragraphs": [
+          "Unlike traditional voice cloning services that use a single large model to fit millions of voices, I developed a system that created custom models trained exclusively on individual voices. This approach captured nuances that get lost in generic voice cloning services.",
+          "Our ensemble approach used multiple deep neural networks working together to preserve authentic personality and speaking style, resulting in voice generations that sounded genuinely human rather than like generic audiobook narration."
+        ]
+      },
+      {
+        "heading": "Memorial Voice Preservation",
+        "paragraphs": [
+          "I developed a specialized service for preserving the voices of deceased loved ones, creating lasting voice legacies from existing recordings and memories. This technology provided comfort to families while demonstrating the emotional impact of our advanced voice synthesis capabilities."
+        ]
+      },
+      {
+        "heading": "Multilingual Support",
+        "paragraphs": [
+          "I implemented support for both English and Spanish voice generation, with a technical architecture designed to easily expand to additional languages. This multilingual capability broadened our market reach and demonstrated the flexibility of our voice synthesis technology."
+        ]
+      },
+      {
+        "heading": "Rapid Training Pipeline",
+        "paragraphs": [
+          "I designed and implemented a voice model training pipeline that could deliver production-ready voice models within 24-48 hours of receiving voice samples. This rapid turnaround was achieved through optimization of the training process and efficient use of computational resources."
+        ]
+      },
+      {
+        "heading": "Competitive Advantage",
+        "paragraphs": [
+          "The technology I developed at VoxBird AI consistently outperformed industry leaders like ElevenLabs for personalized voice synthesis. By focusing exclusively on individual voices rather than fitting millions into a single model, our approach captured subtle nuances that made voice generations sound authentically human."
+        ]
+      }
+    ]
   }
 ]

@@ -1,6 +1,17 @@
 import Link from 'next/link';
 import CTAButton from '@/ui/cta-button';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Next.js Expert | Full-Stack Developer for Hire - Mark Tellez",
+  description: "Hire a Next.js expert with 25+ years of web development experience. Delivering robust, production-ready applications with server-side rendering, optimized performance, and seamless SEO integration.",
+  keywords: ["Next.js expert", "full-stack developer", "server-side rendering", "React applications", "SEO optimization", "performance optimization", "Vercel deployment", "web application development"],
+  url: "https://marktellez.com/i-know/nextjs",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
+
 export default function NextJSSkillPage() {
   return (
     <div className="container mx-auto py-8">

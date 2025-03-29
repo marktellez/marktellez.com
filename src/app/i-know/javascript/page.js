@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "JavaScript Expert | Full-Stack Developer for Hire - Mark Tellez",
+  description: "Hire a JavaScript expert with 25+ years of experience from DHTML to modern frameworks. Delivering elegant, efficient solutions leveraging advanced asynchronous programming and functional techniques.",
+  keywords: ["JavaScript expert", "full-stack developer", "asynchronous programming", "Promises", "DOM manipulation", "React", "Node.js", "functional programming", "event-driven architecture"],
+  url: "https://marktellez.com/i-know/javascript",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function JavaScriptSkillPage() {
   return (
     <div className="container mx-auto py-8">

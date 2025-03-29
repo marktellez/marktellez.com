@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "PyTorch Expert | Deep Learning Engineer for Hire - Mark Tellez",
+  description: "Hire a PyTorch expert with extensive experience in speech synthesis, computer vision, and NLP. Delivering production-grade deep learning models optimized for performance and maintainability.",
+  keywords: ["PyTorch expert", "deep learning engineer", "speech synthesis", "computer vision", "NLP", "reinforcement learning", "model optimization", "AI development"],
+  url: "https://marktellez.com/i-know/pytorch",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function PytorchSkillPage() {
   return (
     <div className="container mx-auto py-8">

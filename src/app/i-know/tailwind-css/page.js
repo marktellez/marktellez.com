@@ -1,6 +1,17 @@
 import Link from 'next/link';
 import CTAButton from '@/ui/cta-button';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+
+export const metadata = generateSeoMetadata({
+  title: "TailwindCSS Expert | CSS Developer for Hire - Mark Tellez",
+  description: "Hire an expert TailwindCSS developer with 15+ years of CSS experience. Delivering responsive, maintainable, and performance-optimized designs for web applications.",
+  keywords: ["TailwindCSS expert", "CSS developer", "responsive design", "web styling", "frontend development", "utility-first CSS", "UI development"],
+  url: "https://marktellez.com/i-know/tailwind-css",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function TailwindCSSSkillPage() {
   return (
     <div className="container mx-auto py-8">

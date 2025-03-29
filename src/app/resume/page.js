@@ -5,6 +5,20 @@ import resumeData from '@/data/resume.json';
 import reviewsData from '@/data/reviews.json';
 import SkillPills from '@/ui/skill-pills';
 
+
+import { generateSeoMetadata } from '@/lib/seo-utils';
+
+export const metadata = generateSeoMetadata({
+  title: "Resume - Mark Tellez | Expert Programmer and AI Engineer",
+  description: "View my professional resume showcasing 25+ years of experience in software development, AI engineering, and technical leadership across multiple industries.",
+  keywords: ["software developer resume", "AI engineer CV", "programming experience", "technical skills", "software engineering career", "senior developer portfolio"],
+  url: "https://marktellez.com/resume",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
+
+
 async function getResumeData() {
   // Filter reviews with at least 200 characters
   const filteredReviews = reviewsData.filter(review =>

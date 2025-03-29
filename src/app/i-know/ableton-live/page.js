@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Ableton Live Expert | Audio Production Specialist - Mark Tellez",
+  description: "Hire an Ableton Live expert with extensive experience in EDM production, game audio, and AI dataset creation. Bridging creative and technical domains with audio production expertise.",
+  keywords: ["Ableton Live expert", "audio production", "EDM production", "game audio", "sound design", "AI dataset creation", "Max for Live", "signal processing"],
+  url: "https://marktellez.com/i-know/ableton-live",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function AbletonLiveSkillPage() {
   return (
     <div className="container mx-auto py-8">

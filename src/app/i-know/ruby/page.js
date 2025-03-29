@@ -2,6 +2,16 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Ruby Expert | Senior Developer for Hire - Mark Tellez",
+  description: "Hire a Ruby expert with 19+ years of experience building web applications, automation tools, and data processing systems. From startups to enterprise solutions, delivering elegant and efficient code.",
+  keywords: ["Ruby expert", "Ruby developer", "Ruby programming", "automation scripts", "data processing", "ETL pipelines", "web development"],
+  url: "https://marktellez.com/i-know/ruby",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
 export default function RubySkillPage() {
   return (
     <div className="container mx-auto py-8">

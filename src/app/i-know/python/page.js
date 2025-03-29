@@ -2,6 +2,17 @@ import Image from 'next/image';
 import CTAButton from '@/ui/cta-button';
 import Link from 'next/link';
 
+import { generateSeoMetadata } from '@/lib/seo-utils';
+export const metadata = generateSeoMetadata({
+  title: "Python Expert | ML & Cloud Developer for Hire - Mark Tellez",
+  description: "Hire a Python expert with 10+ years of experience in machine learning, cloud infrastructure, and voice recognition. Delivering robust, scalable solutions optimized for performance.",
+  keywords: ["Python expert", "machine learning developer", "AWS Lambda", "serverless", "voice models", "reinforcement learning", "data processing", "Django", "Flask"],
+  url: "https://marktellez.com/i-know/python",
+  type: "article",
+  siteName: "Mark Tellez - Expert Programmer and AI Engineer"
+});
+
+
 export default function PythonSkillPage() {
   return (
     <div className="container mx-auto py-8">

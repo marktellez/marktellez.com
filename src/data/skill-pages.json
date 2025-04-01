@@ -27,17 +27,17 @@
   "asp-net": {
     "name": "ASP.NET",
     "category": "Web Development",
-    "hasPage": false
+    "hasPage": true
   },
   "css": {
     "name": "CSS",
     "category": "Web Development",
-    "hasPage": false
+    "hasPage": true
   },
   "django": {
     "name": "Django",
     "category": "Web Development",
-    "hasPage": false
+    "hasPage": true
   },
   "nextjs": {
     "name": "NextJS",
@@ -57,7 +57,7 @@
   "tailwindcss": {
     "name": "TailwindCSS",
     "category": "Web Development",
-    "hasPage": false
+    "hasPage": true
   },
   "ruby-on-rails": {
     "name": "Ruby on Rails",
@@ -67,12 +67,12 @@
   "seo": {
     "name": "SEO",
     "category": "Web Development",
-    "hasPage": false
+    "hasPage": true
   },
   "jest": {
     "name": "Jest",
     "category": "Web Development",
-    "hasPage": false
+    "hasPage": true
   },
   "mongodb": {
     "name": "MongoDB",
@@ -154,10 +154,20 @@
     "category": "Machine Learning & AI",
     "hasPage": true
   },
+  "apache": {
+    "name": "Apache",
+    "category": "Cloud & DevOps",
+    "hasPage": true
+  },
+  "nginx": {
+    "name": "NGINX",
+    "category": "Cloud & DevOps",
+    "hasPage": true
+  },
   "aws-cloud-services": {
     "name": "AWS Cloud Services",
     "category": "Cloud & DevOps",
-    "hasPage": false
+    "hasPage": true
   },
   "aws-lambda": {
     "name": "AWS Lambda",
@@ -172,67 +182,62 @@
   "docker": {
     "name": "Docker",
     "category": "Cloud & DevOps",
-    "hasPage": false
+    "hasPage": true
   },
   "linux": {
     "name": "Linux",
     "category": "Cloud & DevOps",
-    "hasPage": false
+    "hasPage": true
   },
   "serverless-development": {
     "name": "Serverless Development",
     "category": "Cloud & DevOps",
-    "hasPage": false
+    "hasPage": true
   },
   "systems-scaling": {
     "name": "Systems Scaling",
     "category": "Cloud & DevOps",
-    "hasPage": false
+    "hasPage": true
   },
   "bash-scripting": {
     "name": "Bash Scripting",
     "category": "Cloud & DevOps",
-    "hasPage": false
+    "hasPage": true
   },
   "elevenlabs": {
     "name": "ElevenLabs",
     "category": "Audio/Speech Technologies",
-    "hasPage": false
+    "hasPage": true
   },
   "voice-synthesis": {
     "name": "Voice Synthesis",
     "category": "Audio/Speech Technologies",
-    "hasPage": false
+    "hasPage": true
   },
   "automatic-speech-recognition": {
     "name": "Automatic Speech Recognition",
     "category": "Audio/Speech Technologies",
-    "hasPage": false
+    "hasPage": true
   },
   "sound-synthesis": {
     "name": "Sound Synthesis",
     "category": "Audio/Speech Technologies",
-    "hasPage": false
+    "hasPage": true
   },
   "audio-mixing": {
     "name": "Audio Mixing",
     "category": "Audio/Speech Technologies",
-    "hasPage": false
+    "hasPage": true
   },
   "photoshop": {
     "name": "Photoshop",
     "category": "Creative Tools",
     "hasPage": true
   },
-  "illustrator": {
-    "name": "Illustrator",
-    "category": "Creative Tools",
-    "hasPage": false
-  },
   "figma": {
     "name": "Figma",
     "category": "Creative Tools",
-    "hasPage": false
+    "hasPage": true
   },
   "unity": {
     "name": "Unity",

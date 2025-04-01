@@ -9,6 +9,18 @@ export default function SkillPills({ className = "" }) {
   // Function to get color based on index
   const getCategoryColor = (index) => colors[index % colors.length];
 
+  // Function to convert skill name to slug
+  const getSkillSlug = (skill) => {
+    // Special case for C#
+    if (skill.toLowerCase() === 'c#') return 'c-sharp';
+
+    // Regular slug conversion for other skills
+    return skill.toLowerCase()
+      .replace(/\s+/g, '-')
+      .replace(/\./g, '-')
+      .replace(/#/g, 'sharp');
+  };
+
   return (
     <div className={`flex flex-col w-full gap-4 border border-white/10 p-4 md:p-6 rounded-lg ${className}`}>
       {Object.entries(skillsData).map(([category, skills], categoryIndex) => {
@@ -16,8 +28,8 @@ export default function SkillPills({ className = "" }) {
 
         // Sort skills: enabled first, then disabled
         const sortedSkills = [...skills].sort((a, b) => {
-          const aSlug = a.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-').replace(/#/g, 'sharp');
-          const bSlug = b.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-').replace(/#/g, 'sharp');
+          const aSlug = getSkillSlug(a);
+          const bSlug = getSkillSlug(b);
 
           const aHasPage = skillPagesData?.[aSlug]?.hasPage === true;
           const bHasPage = skillPagesData?.[bSlug]?.hasPage === true;
@@ -34,7 +46,7 @@ export default function SkillPills({ className = "" }) {
           <div key={category} className="flex flex-wrap gap-2 md:gap-3 justify-center my-4">
             <span className="w-full text-center text-sm text-white/70 mb-1">{category}:</span>
             {sortedSkills.map((skill, index) => {
-              const skillSlug = skill.toLowerCase().replace(/\s+/g, '-').replace(/\./g, '-').replace(/#/g, 'sharp');
+              const skillSlug = getSkillSlug(skill);
               const hasPage = skillPagesData?.[skillSlug]?.hasPage === true;
 
               return (

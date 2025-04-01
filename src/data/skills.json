@@ -39,6 +39,8 @@
         "Agentic Systems"
     ],
     "Cloud & DevOps": [
+        "Apache",
+        "NGINX",
         "AWS Cloud Services",
         "AWS Lambda",
         "AWS S3",
@@ -57,7 +59,6 @@
     ],
     "Creative Tools": [
         "Photoshop",
-        "Illustrator",
         "Figma",
         "Unity",
         "Ableton Live"

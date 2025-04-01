@@ -30,6 +30,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/resume"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/voice-synthesis</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/voice-synthesis"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/vector-databases</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -72,11 +79,39 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/tailwind-css"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/systems-scaling</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/systems-scaling"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/supervised-learning</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/supervised-learning"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/sound-synthesis</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/sound-synthesis"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/serverless-deployment</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/serverless-deployment"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/seo</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/seo"/>
   </url>
   <url>
     <loc>https://marktellez.com/i-know/scikit-learn</loc>
@@ -149,6 +184,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/nodejs"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/nginx</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/nginx"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/nextjs</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -184,11 +226,25 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/machine-learning"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/linux</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/linux"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/large-language-models</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/large-language-models"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/jest</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/jest"/>
   </url>
   <url>
     <loc>https://marktellez.com/i-know/javascript</loc>
@@ -205,11 +261,46 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/gans"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/figma</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/figma"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/elevenlabs</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/elevenlabs"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/docker</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/docker"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/django</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/django"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/cursor</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/cursor"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/css</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/css"/>
   </url>
   <url>
     <loc>https://marktellez.com/i-know/cnns</loc>
@@ -226,6 +317,13 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/c-sharp"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/bash-scripting</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/bash-scripting"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/aws-s3</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -238,6 +336,41 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/aws-lambda"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/aws-cloud-services</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/aws-cloud-services"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/automatic-speech-recognition</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/automatic-speech-recognition"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/audio-mixing</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/audio-mixing"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/asp-net</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/asp-net"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/apache</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/apache"/>
   </url>
   <url>
     <loc>https://marktellez.com/i-know/agentic-tools</loc>
@@ -597,6 +730,20 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/agentic-systems"/>
   </url>
   <url>
+    <loc>https://marktellez.com/i-know/apache</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/apache"/>
+  </url>
+  <url>
+    <loc>https://marktellez.com/i-know/nginx</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/nginx"/>
+  </url>
+  <url>
     <loc>https://marktellez.com/i-know/aws-cloud-services</loc>
     <lastmod>2025-04-01</lastmod>
     <changefreq>weekly</changefreq>
@@ -693,13 +840,6 @@
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/photoshop"/>
-  </url>
-  <url>
-    <loc>https://marktellez.com/i-know/illustrator</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://marktellez.com/i-know/illustrator"/>
   </url>
   <url>
     <loc>https://marktellez.com/i-know/figma</loc>

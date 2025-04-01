@@ -147,7 +147,7 @@ async function buildResumePDF() {
     y -= 20; // Just add spacing instead of drawing a line
 
     // Add "Builder & Engineer" heading for other info
-    if (statsData.other) {
+    if (statsData.shortBio) {
       page.drawText("Builder & Engineer", {
         x: margin,
         y,
@@ -158,7 +158,7 @@ async function buildResumePDF() {
       y -= 15;
 
       // Add other info from stats
-      page.drawText(statsData.other, {
+      page.drawText(statsData.shortBio, {
         x: margin,
         y,
         size: 12,

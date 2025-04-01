@@ -19,10 +19,10 @@
     "category": "Programming Languages",
     "hasPage": true
   },
-  "csharp": {
+  "c-sharp": {
     "name": "C#",
     "category": "Programming Languages",
-    "hasPage": false
+    "hasPage": true
   },
   "asp-net": {
     "name": "ASP.NET",
@@ -241,6 +241,11 @@
   },
   "unity": {
     "name": "Unity",
+    "category": "Creative Tools",
+    "hasPage": true
+  },
+  "blender": {
+    "name": "Blender",
     "category": "Creative Tools",
     "hasPage": true
   },

@@ -14,6 +14,9 @@ export default function SkillPills({ className = "" }) {
     // Special case for C#
     if (skill.toLowerCase() === 'c#') return 'c-sharp';
 
+    // Special case for TailwindCSS
+    if (skill.toLowerCase() === 'tailwindcss') return 'tailwind-css';
+
     // Regular slug conversion for other skills
     return skill.toLowerCase()
       .replace(/\s+/g, '-')
@@ -48,6 +51,7 @@ export default function SkillPills({ className = "" }) {
             {sortedSkills.map((skill, index) => {
               const skillSlug = getSkillSlug(skill);
               const hasPage = skillPagesData?.[skillSlug]?.hasPage === true;
+              console.log(`Skill: ${skill}, Slug: ${skillSlug}, Has Page: ${hasPage}, Found in data: ${Boolean(skillPagesData?.[skillSlug])}`);
 
               return (
                 <Pill

@@ -19,10 +19,10 @@
     "category": "Programming Languages",
     "hasPage": true
   },
-  "c-sharp": {
+  "csharp": {
     "name": "C#",
     "category": "Programming Languages",
-    "hasPage": true
+    "hasPage": false
   },
   "asp-net": {
     "name": "ASP.NET",
@@ -57,7 +57,7 @@
   "tailwindcss": {
     "name": "TailwindCSS",
     "category": "Web Development",
-    "hasPage": true
+    "hasPage": false
   },
   "ruby-on-rails": {
     "name": "Ruby on Rails",

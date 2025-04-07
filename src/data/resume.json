@@ -570,11 +570,10 @@
     "website": "https://zooly.ai",
     "highlights": [
       "Led voice synthesis team replicating celebrity voices (Snoop Dogg, 50 Cent, Cardi B, etc.)",
-      "Created \"AI or Not?\" testing system with feedback loop",
-      "Developed custom tuning system for ElevenLabs integration",
-      "Implemented parameter optimization algorithms",
-      "Built custom post-processing filters",
-      "Used React/JavaScript/TailwindCSS/AWS stack"
+      "Created \"AI or Not?\" testing system with feedback loop using NextJS, ReactJS and PostgreSQL",
+      "Developed custom tuning system for ElevenLabs integration using NextJS, ReactJS and MongoDB",
+      "Helped built the Zooly chatbot for onboarding and features using RL, Python, AWS, and React/NextJS",
+      "Helped redesign the site completely by implementing good React practices (Context, Hooks) and TailwindCSS"
     ],
     "content": [
       {
@@ -630,13 +629,9 @@
     "to": "2025",
     "website": "https://voxbird.ai",
     "highlights": [
-      "Developed ensemble AI models for ultra-realistic voice synthesis",
-      "Created voice preservation technology beyond simple cloning",
-      "Built systems capturing natural breaths, pauses and speaking cadence",
-      "Implemented voice model training pipeline with 24-48 hour turnaround",
-      "Supported both English and Spanish voice generation",
-      "Designed memorial voice preservation service for deceased loved ones",
-      "Created technology that outperformed ElevenLabs for personalized voices"
+      "Developed ensemble AI models for ultra-realistic voice synthesis using Python, Pytorch, Transformers and a GAN",
+      "Built systems capturing natural breaths, pauses and speaking cadence, beating ElevenLabs on quality",
+      "Designed and built the Training and Inference pipelines using NextJS, ReactJS, MongoDB, Python, and AWS Lambdas"
     ],
     "content": [
       {

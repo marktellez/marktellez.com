@@ -6,15 +6,16 @@
     "from": "2004",
     "to": "2005",
     "highlights": [
-      "Maintained MySQL database systems for the e-commerce platform",
-      "Developed stored procedures to efficiently manage the large product catalog",
-      "Optimized complex queries for inventory management and order processing",
-      "Built ASP.NET components for the online store's shopping experience",
-      "Integrated merchant account services for secure payment processing",
-      "Developed backend services to manage the extensive product catalog",
-      "Introduced to Ruby/LISP by Jim Weirich",
+      "Engineered MySQL database systems for the e-commerce platform",
+      "Developed optimized stored procedures to efficiently manage large product catalog",
+      "Implemented complex SQL queries for inventory management and order processing",
+      "Architected ASP.NET components for the online store's shopping experience",
+      "Integrated secure payment processing through merchant account services",
+      "Developed scalable backend services for product catalog management",
+      "Introduced to Ruby, LISP by Jim Weirich",
       "Pivoted to Ruby on Rails development"
     ],
+    "reasonForLeaving": "My contract was completed and I was eager to move on to Ruby on Rails",
     "content": [
       {
         "heading": "Introduction",
@@ -60,14 +61,15 @@
     "from": "2014",
     "to": "2020",
     "highlights": [
-      "Earned nearly 500 five-star reviews from clients worldwide",
-      "Helped thousands of developers with Ruby on Rails, ReactJS, and JavaScript",
-      "Developed a reputation for exceeding client expectations",
-      "Gained deep insights into consulting business management",
+      "Achieved nearly 500 five-star reviews from clients worldwide",
+      "Mentored thousands of developers in Ruby on Rails, ReactJS, and JavaScript",
+      "Established reputation for delivering solutions exceeding client expectations",
+      "Gained expertise in consulting business management and client relations",
       "Transitioned to entrepreneurship with DevmentorLive",
-      "Worked with diverse clients across industries and technical backgrounds"
+      "Collaborated with diverse clients across industries and technical backgrounds"
     ],
     "heroComponent": "codementor.jsx",
+    "reasonForLeaving": "The platform was sold to new Owners and started to deteriorate in quality",
     "content": [
       {
         "heading": "Introduction",
@@ -109,19 +111,20 @@
   {
     "company": "DevmentorLive",
     "slug": "devmentor-live",
-    "role": "Founder & Consultant",
+    "role": "Founder & Technical Consultant",
     "from": "2020",
     "to": "2022",
-    "website": "https://devmentor.live",
+    "website": "https:, , devmentor.live",
     "highlights": [
-      "Built biogas system and solar-powered AI Box with RTX 4090s",
-      "Developed medical AI models outperforming 2018-2019 research papers",
-      "Created Text-To-Speech model with GANs/Transformers",
-      "Balanced tech work with rural farming lifestyle",
-      "ReactJS/TypeScript/NextJS/TailwindCSS/MongoDB expertise",
-      "Trained game-playing AI agents",
-      "Maintained mentorship relationships from Codementor"
+      "Engineered biogas system and solar-powered AI infrastructure with RTX 4090s",
+      "Developed medical AI models outperforming published research benchmarks",
+      "Architected Text-To-Speech model using GANs, Transformers architecture",
+      "Balanced technical innovation with sustainable rural lifestyle",
+      "Delivered solutions using ReactJS, TypeScript, NextJS, TailwindCSS, MongoDB",
+      "Implemented reinforcement learning for game-playing AI agents",
+      "Maintained strategic mentorship relationships from previous ventures"
     ],
+    "reasonForLeaving": "With the advent of LLMs I saw a rapid drop in new students.",
     "content": [
       {
         "heading": "Introduction",
@@ -177,12 +180,11 @@
     "from": "2005",
     "to": "2005",
     "highlights": [
-      "Developed SOAP interfaces for COBOL/DB2 systems",
-      "Created Ruby automation scripts for interface development",
-      "Worked with legacy database systems",
-      "Trained offshore replacements during transition",
-      "Maintained systems during offshoring process"
+      "Developed SOAP interfaces for COBOL, DB2 systems",
+      "Created Ruby automation scripts to make migration code easier",
+      "Trained my offshore replacement during transition"
     ],
+    "reasonForLeaving": "My contract was completed and my extension to train my replacement was successfully completed.",
     "content": [
       {
         "heading": "Introduction",
@@ -221,12 +223,11 @@
     "from": "2001",
     "to": "2003",
     "highlights": [
-      "Pioneered sports streaming for NHL/NBA",
-      "Led C++ COM+ to C# .NET migration",
-      "Developed edge streaming media components",
-      "Implemented content caching strategies",
-      "Published 4 technical articles with WroxPress"
+      "Pioneered sports streaming for NHL, NBA using the .Net platform",
+      "Stayed late and worked weekends to meet deadlines and skill myself up",
+      "Learned the importance of teamwork and communication with Stakeholders"
     ],
+    "reasonForLeaving": "The team was laid off (20 contractors) and the project was canceled.",
     "content": [
       {
         "heading": "Introduction",
@@ -275,12 +276,12 @@
     "from": "2016",
     "to": "2020",
     "highlights": [
-      "33,000 subscribers with $7k monthly revenue",
-      "Created educational content on JavaScript/React ecosystem",
-      "Pioneered technical education from Mexico City",
-      "Developed effective teaching methodologies",
-      "Transitioned to machine learning/artificial intelligence"
+      "Built up 33,000 subscribers with $7k monthly revenue",
+      "Created educational content on JavaScript, ReactJS, NextJS ecosystem",
+      "Developed effective teaching methodologies through client communication",
+      "During this timeframe I went deep on machine learning, genetic algos, and reinforcement learning"
     ],
+    "reasonForLeaving": "The time it takes to produce and edit quality content was limiting my ability to explore new technical domains.",
     "content": [
       {
         "heading": "Introduction",
@@ -298,7 +299,7 @@
         "heading": "Key Accomplishments",
         "paragraphs": [
           "Built audience of 33,000 subscribers",
-          "Created educational content on JavaScript/React/NextJS/MongoDB",
+          "Created educational content on JavaScript, React, NextJS, MongoDB",
           "Generated $7,000 monthly revenue through content monetization"
         ]
       },
@@ -324,12 +325,11 @@
     "from": "2015",
     "to": "2016",
     "highlights": [
-      "PostgreSQL to MongoDB/MySQL migration",
-      "Developed database transition pipelines",
-      "Ensured data integrity during migrations",
-      "ReactJS career pivot after contract",
-      "Bridged sailing sabbatical and tech return"
+      "PostgreSQL to MongoDB, MySQL migration at scale",
+      "Developed database transition pipelines to migrate very large datasets",
+      "Ensured data integrity during migrations by building a logging system"
     ],
+    "reasonForLeaving": "My contract was completed and the project was a success.",
     "content": [
       {
         "heading": "Introduction",
@@ -346,7 +346,7 @@
       {
         "heading": "Database Migration",
         "paragraphs": [
-          "Wrote migration scripts for PostgreSQL to SchemalessDB/MongoDB",
+          "Wrote migration scripts for PostgreSQL to SchemalessDB, MongoDB",
           "Developed data pipelines for MySQL integration",
           "Ensured data integrity during complex database transitions"
         ]
@@ -368,12 +368,12 @@
     "to": "2005",
     "highlights": [
       "Maintained PostgreSQL systems for Marvel Vs platform",
-      "Developed complex SQL queries/stored procedures",
+      "Developed complex SQL queries, stored procedures",
       "Optimized database performance through indexing",
-      "Built interactive UI with JavaScript/CSS",
-      "Implemented drag-and-drop card management",
-      "Created cutting-edge responsive layouts"
+      "Built interactive UI with JavaScript, CSS",
+      "Implemented drag-and-drop card management framework"
     ],
+    "reasonForLeaving": "I was on contract and Robert Half wanted to increase my billing rate, UD said no.",
     "content": [
       {
         "heading": "Introduction",
@@ -418,13 +418,12 @@
     "from": "2006",
     "to": "2012",
     "highlights": [
-      "Built multiple e-commerce platforms",
-      "Developed WoW-competitive community system",
-      "Lived intense startup lifestyle in SF/LA",
-      "Mastered Ruby on Rails capabilities",
-      "Learned business/marketing essentials",
-      "Work-hard-play-hard lifestyle balance"
+      "Built multiple e-commerce platforms using Ruby on Rails, JavaScript and MySQL, PostgreSQL",
+      "Developed WoW-competitive community management system",
+      "Lived intense startup lifestyle in SF, LA, Work Hard Play Hard",
+      "Mastered Ruby on Rails capabilities leveraging SOLID practices"
     ],
+    "reasonForLeaving": "This was a turbulent time and even completed projects and companies were shut down",
     "content": [
       {
         "heading": "Introduction",
@@ -474,6 +473,7 @@
       "Learned about project ephemerality in tech",
       "Developed extreme work ethic standards"
     ],
+    "reasonForLeaving": "My contract was completed and I didn't want to renew due to the crazy working hours",
     "content": [
       {
         "heading": "Introduction",
@@ -519,12 +519,11 @@
     "from": "2005",
     "to": "2006",
     "highlights": [
-      "Developed YouTube's original comment system",
+      "Developed YouTube's original comment system based on PHPBB source code",
       "Worked with PERL and Ruby during explosive growth",
-      "Adapted open source Bulletin Board systems",
-      "Learned scaling principles from senior engineers",
-      "Pivoted career focus to Ruby development"
+      "Learned scaling principles from senior engineers"
     ],
+    "reasonForLeaving": "We successfully launched the new comment system and our contract team was let go",
     "content": [
       {
         "heading": "Introduction",
@@ -567,14 +566,15 @@
     "role": "Sr. Web Developer & Voice Synthesis Lead",
     "from": "2024",
     "to": "2025",
-    "website": "https://zooly.ai",
+    "website": "https:, , zooly.ai",
     "highlights": [
-      "Led voice synthesis team replicating celebrity voices (Snoop Dogg, 50 Cent, Cardi B, etc.)",
-      "Created \"AI or Not?\" testing system with feedback loop using NextJS, ReactJS and PostgreSQL",
-      "Developed custom tuning system for ElevenLabs integration using NextJS, ReactJS and MongoDB",
-      "Helped built the Zooly chatbot for onboarding and features using RL, Python, AWS, and React/NextJS",
-      "Helped redesign the site completely by implementing good React practices (Context, Hooks) and TailwindCSS"
+      "Led voice synthesis team developing celebrity voice models using deep learning techniques",
+      "Architected \"AI or Not?\" testing system with feedback loop using NextJS, ReactJS and PostgreSQL",
+      "Engineered custom tuning system for ElevenLabs integration using NextJS, ReactJS and MongoDB",
+      "Developed Zooly chatbot for onboarding using reinforcement learning, Python, AWS, and React, NextJS",
+      "Implemented site redesign using React best practices (Context API, Custom Hooks) and TailwindCSS"
     ],
+    "reasonForLeaving": "The copmany wanted to pivot to a direction I didn't want to go, but I wish them luck",
     "content": [
       {
         "heading": "Introduction",
@@ -627,12 +627,13 @@
     "role": "AI Voice Synthesis Lead",
     "from": "2025",
     "to": "2025",
-    "website": "https://voxbird.ai",
+    "website": "https:, , voxbird.ai",
     "highlights": [
-      "Developed ensemble AI models for ultra-realistic voice synthesis using Python, Pytorch, Transformers and a GAN",
-      "Built systems capturing natural breaths, pauses and speaking cadence, beating ElevenLabs on quality",
-      "Designed and built the Training and Inference pipelines using NextJS, ReactJS, MongoDB, Python, and AWS Lambdas"
+      "Architected ensemble AI models for ultra-realistic voice synthesis using Python, PyTorch, Transformers and GANs",
+      "Engineered systems capturing natural speech patterns, outperforming industry-leading solutions",
+      "Designed and implemented end-to-end training and inference pipelines using NextJS, ReactJS, MongoDB, Python, and AWS Lambda"
     ],
+    "reasonForLeaving": "I completed the pipeline and software to run this, but I don't have the resources to market it effectively",
     "content": [
       {
         "heading": "Introduction",

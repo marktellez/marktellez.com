@@ -4,7 +4,9 @@
         "Python",
         "Ruby",
         "TypeScript",
-        "C#"
+        "C#",
+        "Microservices",
+        "GraphQL"
     ],
     "Web Development": [
         "ASP.NET",
@@ -16,10 +18,15 @@
         "TailwindCSS",
         "Ruby on Rails",
         "SEO",
-        "Jest"
+        "Jest",
+        "Frontend",
+        "Backend",
+        "Fullstack",
+        "Web Design"
     ],
     "Databases": [
         "MongoDB",
+        "NoSQL",
         "MySQL",
         "PostgreSQL",
         "Vector Databases"
@@ -29,6 +36,7 @@
         "GANs",
         "Machine Learning",
         "Supervised Learning",
+        "RAG",
         "Transformers",
         "Pytorch",
         "Scikit-learn",
@@ -48,7 +56,10 @@
         "Linux",
         "Serverless Development",
         "Systems Scaling",
-        "Bash Scripting"
+        "Bash Scripting",
+        "Terraform",
+        "Kubernetes",
+        "Docker"
     ],
     "Audio/Speech Technologies": [
         "ElevenLabs",

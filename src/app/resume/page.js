@@ -26,7 +26,9 @@ async function getResumeData() {
   );
 
   return {
-    companies: resumeData,
+    companies: resumeData.workExperience,
+    education: resumeData.education,
+    achievements: resumeData.achievements,
     reviews: filteredReviews
   };
 }
@@ -46,6 +48,61 @@ export default async function ResumePage() {
         <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-700">Skills & Expertise</h2>
         <SkillPills />
       </section>
+
+
+      {/* Achievements Section */}
+      <section id="achievements" className="mb-16 scroll-mt-20">
+        <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-700">Achievements</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {data.achievements.map((achievement, index) => (
+            <div key={index} className="bg-gray-800 p-6 rounded-lg shadow-md">
+              <h3 className="text-xl font-semibold mb-2">{achievement.title}</h3>
+              <p className="text-gray-300 mb-2">{achievement.description}</p>
+              <div className="flex justify-between items-center">
+                <span className="text-gray-400">{achievement.year}</span>
+                {achievement.url && (
+                  <a
+                    href={achievement.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-400 hover:text-blue-300"
+                  >
+                    View Details
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Education Section */}
+      <section id="education" className="mb-16 scroll-mt-20">
+        <h2 className="text-2xl font-bold mb-6 pb-2 border-b border-gray-700">Education</h2>
+        {data.education.map((edu, index) => (
+          <div key={index} className="mb-8">
+            <h3 className="text-xl font-semibold">{edu.institution}</h3>
+            <p className="text-gray-300">{edu.degree}{edu.minor ? `, Minor in ${edu.minor}` : ''}</p>
+            <p className="text-gray-400">{edu.from} - {edu.to}</p>
+            {edu.gpa && <p className="text-gray-400">GPA: {edu.gpa}</p>}
+
+            {edu.details && edu.details.length > 0 && (
+              <div className="mt-3">
+                <h4 className="text-md font-medium text-gray-300 mb-2">Coursework & Focus Areas:</h4>
+                <ul className="space-y-1 text-gray-400 text-sm">
+                  {edu.details.map((detail, i) => (
+                    <li key={i} className="flex items-start">
+                      <span className="text-blue-400 mr-2">•</span>
+                      <span>{detail}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
+          </div>
+        ))}
+      </section>
+
 
       {/* Work Experience Section */}
       <section id="employment" className="mb-16 scroll-mt-20">
@@ -86,6 +143,16 @@ export default async function ResumePage() {
                     </div>
 
                     <div className="text-lg font-medium text-blue-400 mb-4">{company.title || company.role}</div>
+
+                    {company.location && (
+                      <div className="text-sm text-gray-400 mb-4 flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 mr-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                        </svg>
+                        {company.location}
+                      </div>
+                    )}
 
                     {company.highlights && company.highlights.length > 0 && (
                       <ul className="space-y-2 text-gray-300 text-sm">

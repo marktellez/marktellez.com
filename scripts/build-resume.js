@@ -1,15 +1,12 @@
-#!/usr/bin/env node
+// Update the build-resume.js script to handle the new JSON structure and undefined values
 
 const fs = require('fs');
 const path = require('path');
 const { PDFDocument, rgb, StandardFonts } = require('pdf-lib');
 const fontkit = require('@pdf-lib/fontkit');
 
-// Import data
-const skillsData = require('../src/data/skills.json');
+// Import data - only use resume.json
 const resumeData = require('../src/data/resume.json');
-const reviewsData = require('../src/data/reviews.json');
-const statsData = require('../src/data/stats.json');
 
 async function buildResumePDF() {
   try {
@@ -22,15 +19,12 @@ async function buildResumePDF() {
     // Add a page to the document
     let page = pdfDoc.addPage([595.28, 841.89]); // A4 size
 
-    // Try to load Quicksand fonts from public directory
     let font, boldFont;
     try {
-      // Path to Quicksand fonts in public/fonts directory
-      const mediumFontPath = path.join(process.cwd(), 'public', 'fonts', 'Quicksand-Medium.ttf');
-      const blackFontPath = path.join(process.cwd(), 'public', 'fonts', 'Quicksand-Bold.ttf');
+      const mediumFontPath = path.join(process.cwd(), 'public', 'fonts', 'Helvetica.ttf');
+      const blackFontPath = path.join(process.cwd(), 'public', 'fonts', 'Helvetica-Bold.ttf');
 
       if (fs.existsSync(mediumFontPath) && fs.existsSync(blackFontPath)) {
-        console.log('Using Quicksand fonts from public/fonts directory');
         const mediumFontBytes = fs.readFileSync(mediumFontPath);
         const blackFontBytes = fs.readFileSync(blackFontPath);
 
@@ -41,9 +35,9 @@ async function buildResumePDF() {
         font = await pdfDoc.embedFont(mediumFontBytes);      // MEDIUM weight
         boldFont = await pdfDoc.embedFont(blackFontBytes);   // BLACK/BOLD weight
 
-        console.log('Successfully loaded Quicksand fonts with proper weights');
+        console.log('Successfully loaded  fonts with proper weights');
       } else {
-        throw new Error('Quicksand fonts not found in public/fonts directory');
+        throw new Error(' fonts not found in public/fonts directory');
       }
     } catch (error) {
       console.log('Falling back to standard fonts:', error.message);
@@ -51,8 +45,6 @@ async function buildResumePDF() {
       font = await pdfDoc.embedFont(StandardFonts.Helvetica);
       boldFont = await pdfDoc.embedFont(StandardFonts.HelveticaBold);
     }
-
-
 
     // Set page background color (white)
     page.drawRectangle({
@@ -66,6 +58,15 @@ async function buildResumePDF() {
     // Set initial position
     let y = 800;
     const margin = 50;
+
+    // Helper function to safely draw text (check for undefined values)
+    const safeDrawText = (text, options) => {
+      if (text !== undefined && text !== null) {
+        page.drawText(String(text), options);
+      } else {
+        console.log(`Warning: Attempted to draw undefined text at y=${options.y}`);
+      }
+    };
 
     // Read the local image file
     const imagePath = path.join(process.cwd(), 'src/app/marktellez.png');
@@ -93,7 +94,7 @@ async function buildResumePDF() {
     const textX = margin + photoWidth + 20; // 20px spacing between photo and text
 
     // Add personal info from stats
-    page.drawText(statsData.name, {
+    safeDrawText(resumeData.stats.name, {
       x: textX,
       y,
       size: 24,
@@ -103,7 +104,27 @@ async function buildResumePDF() {
     y -= 20;
 
     // Add title
-    page.drawText(statsData.title, {
+    safeDrawText(resumeData.stats.title, {
+      x: textX,
+      y,
+      size: 12,
+      font: font,
+    });
+
+    y -= 15;
+
+    // Add location
+    safeDrawText(resumeData.stats.address, {
+      x: textX,
+      y,
+      size: 12,
+      font: font,
+    });
+
+    y -= 15;
+
+    // Add phone number
+    safeDrawText(resumeData.stats.phoneNumber, {
       x: textX,
       y,
       size: 12,
@@ -113,7 +134,7 @@ async function buildResumePDF() {
     y -= 15;
 
     // Add website
-    page.drawText(statsData.website, {
+    safeDrawText(resumeData.stats.website, {
       x: textX,
       y,
       size: 12,
@@ -123,7 +144,7 @@ async function buildResumePDF() {
     y -= 15;
 
     // Add contact email
-    page.drawText(statsData.contactEmail, {
+    safeDrawText(resumeData.stats.contactEmail, {
       x: textX,
       y,
       size: 12,
@@ -147,8 +168,8 @@ async function buildResumePDF() {
     y -= 20; // Just add spacing instead of drawing a line
 
     // Add "Builder & Engineer" heading for other info
-    if (statsData.shortBio) {
-      page.drawText("Builder & Engineer", {
+    if (resumeData.stats.shortBio) {
+      safeDrawText("Builder & Engineer", {
         x: margin,
         y,
         size: 14,
@@ -157,14 +178,81 @@ async function buildResumePDF() {
 
       y -= 15;
 
-      // Add other info from stats
-      page.drawText(statsData.shortBio, {
+      // Add text wrapping for shortBio
+      const bioWords = resumeData.stats.bio.split(' ');
+      let bioLine = '';
+      const maxWidth = page.getWidth() - (margin * 2);
+
+      for (const word of bioWords) {
+        const testLine = bioLine + (bioLine ? ' ' : '') + word;
+        const textWidth = font.widthOfTextAtSize(testLine, 12);
+
+        if (textWidth > maxWidth && bioLine) {
+          safeDrawText(bioLine, {
+            x: margin,
+            y,
+            size: 12,
+            font: font,
+          });
+          y -= 15;
+          bioLine = word;
+        } else {
+          bioLine = testLine;
+        }
+      }
+
+      if (bioLine) {
+        safeDrawText(bioLine, {
+          x: margin,
+          y,
+          size: 12,
+          font: font,
+        });
+        y -= 15;
+      }
+    } else if (resumeData.stats.bio) {
+      // Fallback to bio if shortBio is not available
+      safeDrawText("About me", {
         x: margin,
         y,
-        size: 12,
-        font: font,
+        size: 14,
+        font: boldFont,
       });
+
       y -= 15;
+
+      // Add text wrapping for bio
+      const bioWords = resumeData.stats.bio.split(' ');
+      let bioLine = '';
+      const maxWidth = page.getWidth() - (margin * 2);
+
+      for (const word of bioWords) {
+        const testLine = bioLine + (bioLine ? ' ' : '') + word;
+        const textWidth = font.widthOfTextAtSize(testLine, 12);
+
+        if (textWidth > maxWidth && bioLine) {
+          safeDrawText(bioLine, {
+            x: margin,
+            y,
+            size: 12,
+            font: font,
+          });
+          y -= 15;
+          bioLine = word;
+        } else {
+          bioLine = testLine;
+        }
+      }
+
+      if (bioLine) {
+        safeDrawText(bioLine, {
+          x: margin,
+          y,
+          size: 12,
+          font: font,
+        });
+        y -= 15;
+      }
     }
 
     // Removed horizontal line after Builder & Engineer section
@@ -194,7 +282,7 @@ async function buildResumePDF() {
     // Achievement content inside the box
     y -= 15;
 
-    page.drawText('AI Programming Champion - CodinGame Fantastic Bits', {
+    safeDrawText('AI Programming Champion - CodinGame Fantastic Bits', {
       x: margin,
       y,
       size: 12,
@@ -203,7 +291,7 @@ async function buildResumePDF() {
 
     y -= 15;
 
-    page.drawText('Ranked #8 out of 5,000 participants worldwide', {
+    safeDrawText('Ranked #8 out of 5,000 participants worldwide', {
       x: margin + 10,
       y,
       size: 10,
@@ -212,7 +300,7 @@ async function buildResumePDF() {
 
     y -= 15;
 
-    page.drawText('Developed an advanced AI agent using reinforcement learning techniques', {
+    safeDrawText('Developed an advanced AI agent using reinforcement learning techniques', {
       x: margin + 10,
       y,
       size: 10,
@@ -221,7 +309,7 @@ async function buildResumePDF() {
 
     y -= 15;
 
-    page.drawText('Leaderboard: https://www.codingame.com/multiplayer/bot-programming/fantastic-bits/leaderboard', {
+    safeDrawText('Leaderboard: https://www.codingame.com/multiplayer/bot-programming/fantastic-bits/leaderboard', {
       x: margin + 10,
       y,
       size: 10,
@@ -235,7 +323,7 @@ async function buildResumePDF() {
 
     // Skills section
     y -= 15;
-    page.drawText('Skills', {
+    safeDrawText('Skills', {
       x: margin,
       y,
       size: 16,
@@ -271,126 +359,180 @@ async function buildResumePDF() {
       }
     };
 
-    // Process skills by category
-    Object.entries(skillsData).forEach(([category, skills]) => {
-      // Check if we need a new page
-      if (y < 150) {
-        page = pdfDoc.addPage([595.28, 841.89]);
-        y = 800;
-      }
-
-      // Category name as subheading
-      page.drawText(category, {
-        x: margin,
-        y,
-        ...fontStyles.subheading
-      });
-
-      y -= 15;
-
-      // Skills in this category as regular text
-      const skillsText = skills.join(', ');
-
-      // Split long skill lists into multiple lines
-      const maxLineWidth = page.getWidth() - (margin * 2);
-      let line = '';
-      let lines = [];
-
-      skills.forEach((skill, index) => {
-        const testLine = line + (line ? ', ' : '') + skill;
-        const textWidth = font.widthOfTextAtSize(testLine, 10);
-
-        if (textWidth > maxLineWidth && line) {
-          lines.push(line);
-          line = skill;
-        } else {
-          line = testLine;
-        }
-
-        if (index === skills.length - 1 && line) {
-          lines.push(line);
-        }
-      });
-
-      // Draw each line
-      lines.forEach(line => {
+    // Process skills by category - adapt for new JSON structure
+    if (resumeData.skills) {
+      Object.entries(resumeData.skills).forEach(([category, skills]) => {
+        // Check if we need a new page
         if (y < 150) {
           page = pdfDoc.addPage([595.28, 841.89]);
           y = 800;
         }
 
-        if (line) {
-          page.drawText(line, {
+        // Category name as subheading
+        safeDrawText(category, {
+          x: margin,
+          y,
+          ...fontStyles.subheading
+        });
+
+        y -= 15;
+
+        // Extract skill names from the new structure (objects with skill and yearsExperience)
+        const skillNames = skills.map(item =>
+          typeof item === 'object' && item.skill ? item.skill : String(item)
+        );
+
+        // Split long skill lists into multiple lines
+        const maxLineWidth = page.getWidth() - (margin * 2);
+        let line = '';
+        let lines = [];
+
+        skillNames.forEach((skill, index) => {
+          const testLine = line + (line ? ', ' : '') + skill;
+          const textWidth = font.widthOfTextAtSize(testLine, 10);
+
+          if (textWidth > maxLineWidth && line) {
+            lines.push(line);
+            line = skill;
+          } else {
+            line = testLine;
+          }
+
+          if (index === skillNames.length - 1 && line) {
+            lines.push(line);
+          }
+        });
+
+        // Draw each line
+        lines.forEach(line => {
+          if (y < 150) {
+            page = pdfDoc.addPage([595.28, 841.89]);
+            y = 800;
+          }
+
+          if (line) {
+            safeDrawText(line, {
+              x: margin,
+              y,
+              size: 10,
+              font: font,
+            });
+          }
+
+          y -= 15;
+        });
+
+        y -= 10;
+      });
+    }
+
+    // Add Education section
+    y -= 10;
+    safeDrawText('Education', {
+      x: margin,
+      y,
+      size: 16,
+      font: boldFont,
+    });
+
+    y -= 10;
+
+    drawHorizontalLine(y);
+
+    y -= 30;
+
+    // Check if education data exists and is iterable
+    if (resumeData.education && Array.isArray(resumeData.education)) {
+      // Process education entries
+      resumeData.education.forEach((edu) => {
+        // Check if we need a new page
+        if (y < 150) {
+          page = pdfDoc.addPage([595.28, 841.89]);
+          y = 800;
+        }
+
+        // Institution name and duration
+        safeDrawText(`${edu.institution} (${edu.from} - ${edu.to})`, {
+          x: margin,
+          y,
+          size: 12,
+          font: boldFont,
+        });
+
+        y -= 15;
+
+        // Degree and minor if available
+        const degreeText = edu.minor
+          ? `${edu.degree}, Minor in ${edu.minor}`
+          : edu.degree;
+
+        safeDrawText(degreeText, {
+          x: margin,
+          y,
+          size: 11,
+          font: font,
+        });
+
+        y -= 15;
+
+        // GPA if available
+        if (edu.gpa) {
+          safeDrawText(`GPA: ${edu.gpa}`, {
             x: margin,
             y,
             size: 10,
             font: font,
           });
+          y -= 15;
+        }
+
+        // Details/coursework
+        if (edu.details && Array.isArray(edu.details)) {
+          // Add a small header for details
+          safeDrawText("Coursework & Focus Areas:", {
+            x: margin,
+            y,
+            size: 10,
+            font: boldFont,
+          });
+
+          y -= 15;
+
+          edu.details.forEach((detail) => {
+            // Check if we need a new page
+            if (y < 150) {
+              page = pdfDoc.addPage([595.28, 841.89]);
+              y = 800;
+            }
+
+            safeDrawText(`• ${detail}`, {
+              x: margin + 10,
+              y,
+              size: 10,
+              font: font,
+            });
+
+            y -= 15;
+          });
         }
 
         y -= 15;
       });
-
-      y -= 10;
-    });
-
-    // Add Education section
-    y -= 10;
-    page.drawText('Education', {
-      x: margin,
-      y,
-      size: 16,
-      font: boldFont,
-    });
-
-    y -= 10;
-
-    drawHorizontalLine(y);
-
-    y -= 30;
-
-    // Add education message
-    page.drawText('To see my education history, visit https://marktellez.com/education', {
-      x: margin,
-      y,
-      size: 10,
-      font: font,
-    });
+    } else {
+      // Add education message as fallback
+      safeDrawText('To see my education history, visit https://marktellez.com/education', {
+        x: margin,
+        y,
+        size: 10,
+        font: font,
+      });
+    }
 
     y -= 15;
 
-    // Add the promise text
-    const promiseText = "- it's an interesting read. I promise! ";
-    page.drawText(promiseText, {
-      x: margin,
-      y,
-      size: 10,
-      font: font,
-    });
-
-    // Calculate width of the text to position the emoji
-    const textWidth = font.widthOfTextAtSize(promiseText, 10);
-
-    // Load and embed the emoji image
-    const emojiPath = path.join(process.cwd(), 'public', 'smiling-face-with-smiling-eyes.png');
-    const emojiBytes = fs.readFileSync(emojiPath);
-    const emojiImage = await pdfDoc.embedPng(emojiBytes);
-
-    // Draw the emoji (sized appropriately for the text)
-    const emojiSize = 12; // Slightly larger than the font size
-    page.drawImage(emojiImage, {
-      x: margin + textWidth,
-      y: y - emojiSize + 8, // Adjust vertical position to align with text
-      width: emojiSize,
-      height: emojiSize,
-    });
-
-    // Force Work Experience to start on a new page
-    page = pdfDoc.addPage([595.28, 841.89]);
-    y = 800; // Reset y position for the new page
 
     // Add work experience section
-    page.drawText('Work Experience', {
+    safeDrawText('Work Experience', {
       x: margin,
       y,
       size: 16,
@@ -403,8 +545,11 @@ async function buildResumePDF() {
 
     y -= 30;
 
+    // Use workExperience array from the new JSON structure
+    const workExperience = resumeData.workExperience || [];
+
     // Sort companies by 'from' year in descending order
-    const sortedCompanies = [...resumeData].sort((a, b) => {
+    const sortedCompanies = [...workExperience].sort((a, b) => {
       const yearA = parseInt(a.from);
       const yearB = parseInt(b.from);
       return yearB - yearA;
@@ -419,7 +564,7 @@ async function buildResumePDF() {
       }
 
       // Company name and duration
-      page.drawText(`${company.company} (${company.from} - ${company.to})`, {
+      safeDrawText(`${company.company} (${company.from} - ${company.to})`, {
         x: margin,
         y,
         size: 12,
@@ -429,7 +574,7 @@ async function buildResumePDF() {
       y -= 15;
 
       // Role/title
-      page.drawText(company.title || company.role, {
+      safeDrawText(company.title || company.role, {
         x: margin,
         y,
         size: 11,
@@ -437,6 +582,17 @@ async function buildResumePDF() {
       });
 
       y -= 15;
+
+      // Location if available
+      if (company.location) {
+        safeDrawText(`Location: ${company.location}`, {
+          x: margin,
+          y,
+          size: 10,
+          font: font,
+        });
+        y -= 15;
+      }
 
       // Highlights
       if (company.highlights && company.highlights.length > 0) {
@@ -447,7 +603,7 @@ async function buildResumePDF() {
             y = 800;
           }
 
-          page.drawText(`• ${highlight}`, {
+          safeDrawText(`• ${highlight}`, {
             x: margin + 10,
             y,
             size: 10,
@@ -461,175 +617,6 @@ async function buildResumePDF() {
       y -= 15;
     });
 
-    // Add reviews section - force it to start on page 5
-    // First, count current pages and add pages until we reach page 5
-    const currentPageCount = pdfDoc.getPageCount();
-    console.log(`Current page count before reviews: ${currentPageCount}`);
-
-    // If we have fewer than 5 pages, add empty pages until we reach page 5
-    while (pdfDoc.getPageCount() < 5) {
-      pdfDoc.addPage([595.28, 841.89]);
-      console.log(`Added page, now at ${pdfDoc.getPageCount()} pages`);
-    }
-
-    // Get the 5th page (index 4)
-    page = pdfDoc.getPage(4);
-    y = 800; // Reset y position for the new page
-
-    // Use specific handpicked reviews instead of filtering from reviewsData
-    const handpickedReviews = [
-      {
-        content: "I've used Mark a couple times. He is awesome! I've been using Rails, etc for 7+ years but I still get hung up once in a while...Mark knows his $h!. I won't search for mentors anymore...I'll just use Mark.",
-        writer: { name: "Adam Stockland" }
-      },
-      {
-        content: "Ive known about Mark for a while through his React courses, I reached out to him to help me start architecting an app I am building as a side project. He was awesome! I got answers to alot of the areas of this project that I was unfamiliar with and we planned out a way to get the project going. Really looking forward to continuing to work with him.",
-        writer: { name: "Thomas Anderson" }
-      },
-      {
-        content: "Mark has a wealth of knowledge and expertise that is hard to find. Perfect mentor in many ways: clear and concise communication, reliable and a great teacher. I highly recommend working with him if you need help.",
-        writer: { name: "Jelena Grimshaw" }
-      },
-      {
-        content: "Wow, Mark has really proved himself to be an expert in many ways. Definitely worth the investment and here's why: Pros: He works really fast, gave me some really helpful tips, explained me everything through meaningful examples and even improved some parts of already existing code in a way which makes them more clean and usable. Cons: I only wish the session was longer as I am looking forward to another one :)",
-        writer: { name: "Daniel Star" }
-      },
-      {
-        content: "Mark is so good at JavaScript and React (and Redux). He immediately knows how to address the task at hand and then starts throwing down code. I really appreciate his positive attitude and the time he takes to walk me through the work.",
-        writer: { name: "Ashley" }
-      },
-      {
-        content: "Mark has been helping us daily with my website for about a week now and I would confidently recommend him to any peer looking for someone who is a fast developer, strong communicator and honest worker.",
-        writer: { name: "Jack Bordner" }
-      },
-      {
-        content: "Mark completed a project for us within a short amount of time. His code was excellent and he always confirmed we understood his work for the handoff.",
-        writer: { name: "Jeff Carroll" }
-      }
-    ];
-
-    console.log(`Total reviews to process: ${handpickedReviews.length}`);
-    console.log(`Reviews: ${handpickedReviews.map(r => r.writer.name).join(', ')}`);
-
-    if (handpickedReviews.length > 0) {
-      page.drawText('Client Reviews', {
-        x: margin,
-        y,
-        size: 16,
-        font: boldFont,
-      });
-
-      y -= 10;
-      drawHorizontalLine(y);
-      y -= 20;
-
-      // Process handpicked reviews
-      handpickedReviews.forEach((review, index) => {
-        console.log(`Processing review ${index + 1} by ${review.writer.name}, y position: ${y}`);
-
-        // Check if we need a new page - ensure enough space for at least 5 lines
-        if (y < 200) {
-          console.log(`  Adding new page for review ${index + 1}, y was: ${y}`);
-          page = pdfDoc.addPage([595.28, 841.89]);
-          y = 800;
-        }
-
-        // Handle text wrapping for review content
-        const maxWidth = page.getWidth() - (margin * 2);
-        const words = review.content.split(' ');
-        let line = '';
-        const lineHeight = 15; // Increased line height
-        let linesCount = 0;
-        const maxLines = 5; // Limit to 5 lines per review
-
-        for (const word of words) {
-          const testLine = line + (line ? ' ' : '') + word;
-          const textWidth = font.widthOfTextAtSize(testLine, 10);
-
-          if (textWidth > maxWidth && line) {
-            // Check if we need a new page
-            if (y < 100) {
-              page = pdfDoc.addPage([595.28, 841.89]);
-              y = 800;
-            }
-
-            page.drawText(line, {
-              x: margin,
-              y,
-              size: 10,
-              font: font,
-            });
-            y -= lineHeight;
-            line = word;
-            linesCount++;
-
-            // Limit number of lines per review
-            if (linesCount >= maxLines) {
-              line += '...';
-              break;
-            }
-          } else {
-            line = testLine;
-          }
-        }
-
-        if (line) {
-          // Check if we need a new page
-          if (y < 100) {
-            page = pdfDoc.addPage([595.28, 841.89]);
-            y = 800;
-          }
-
-          page.drawText(line, {
-            x: margin,
-            y,
-            size: 10,
-            font: font,
-          });
-          y -= lineHeight;
-        }
-
-        // Reviewer name
-        const reviewerName = review.writer?.name || 'Anonymous';
-
-        // Check if we need a new page
-        if (y < 100) {
-          page = pdfDoc.addPage([595.28, 841.89]);
-          y = 800;
-        }
-
-        page.drawText(`- ${reviewerName}`, {
-          x: margin,
-          y,
-          size: 10,
-          font: boldFont,
-        });
-
-        y -= 25; // Increased spacing between reviews
-      });
-
-      // Add link to see all reviews
-      y -= 10;
-      page.drawText('See all my testimonials at: https://marktellez.com/testimonials', {
-        x: margin,
-        y,
-        size: 10,
-        font: font,
-      });
-
-      y -= 20;
-    }
-
-    // Add footer with website URL
-    const pages = pdfDoc.getPages();
-    pages.forEach(p => {
-      p.drawText('The document was built in real-time from https://marktellez.com/resume', {
-        x: margin,
-        y: 30,
-        size: 8,
-        font: font,
-      });
-    });
 
     // Serialize the PDF to bytes
     const pdfBytes = await pdfDoc.save();

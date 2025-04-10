@@ -24,6 +24,16 @@
     "category": "Programming Languages",
     "hasPage": false
   },
+  "microservices": {
+    "name": "Microservices",
+    "category": "Programming Languages",
+    "hasPage": false
+  },
+  "graphql": {
+    "name": "GraphQL",
+    "category": "Programming Languages",
+    "hasPage": false
+  },
   "asp-net": {
     "name": "ASP.NET",
     "category": "Web Development",
@@ -74,10 +84,35 @@
     "category": "Web Development",
     "hasPage": true
   },
+  "frontend": {
+    "name": "Frontend",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "backend": {
+    "name": "Backend",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "fullstack": {
+    "name": "Fullstack",
+    "category": "Web Development",
+    "hasPage": false
+  },
+  "web-design": {
+    "name": "Web Design",
+    "category": "Web Development",
+    "hasPage": false
+  },
   "mongodb": {
     "name": "MongoDB",
     "category": "Databases",
     "hasPage": true
+  },
+  "nosql": {
+    "name": "NoSQL",
+    "category": "Databases",
+    "hasPage": false
   },
   "mysql": {
     "name": "MySQL",
@@ -113,6 +148,11 @@
     "name": "Supervised Learning",
     "category": "Machine Learning & AI",
     "hasPage": true
+  },
+  "rag": {
+    "name": "RAG",
+    "category": "Machine Learning & AI",
+    "hasPage": false
   },
   "transformers": {
     "name": "Transformers",
@@ -203,6 +243,16 @@
     "name": "Bash Scripting",
     "category": "Cloud & DevOps",
     "hasPage": true
+  },
+  "terraform": {
+    "name": "Terraform",
+    "category": "Cloud & DevOps",
+    "hasPage": false
+  },
+  "kubernetes": {
+    "name": "Kubernetes",
+    "category": "Cloud & DevOps",
+    "hasPage": false
   },
   "elevenlabs": {
     "name": "ElevenLabs",

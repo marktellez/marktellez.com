@@ -7,8 +7,8 @@ export const dynamic = 'force-dynamic';
 export async function GET(request, { params }) {
     const { slug } = await params;
 
-    // Find the company that matches the slug
-    const company = resumeData.find(
+    // Find the company that matches the slug from workExperience array
+    const company = resumeData.workExperience.find(
         company => company.slug === slug
     );
 

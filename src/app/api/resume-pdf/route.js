@@ -1,9 +1,6 @@
 import { NextResponse } from 'next/server';
 import { PDFDocument, rgb, StandardFonts } from 'pdf-lib';
-import skillsData from '@/data/skills.json';
 import resumeData from '@/data/resume.json';
-import reviewsData from '@/data/reviews.json';
-import statsData from '@/data/stats.json';
 
 export const runtime = 'edge';
 
@@ -23,37 +20,8 @@ export async function GET() {
     let y = 800;
     const margin = 50;
 
-    // Fetch and embed the photo
-    const photoUrl = new URL(statsData.photo, 'https://marktellez.com').href;
-    const photoResponse = await fetch(photoUrl);
-    const photoArrayBuffer = await photoResponse.arrayBuffer();
-
-    let photoImage;
-    try {
-      // Try to embed as PNG first
-      photoImage = await pdfDoc.embedPng(photoArrayBuffer);
-    } catch (e) {
-      // If not PNG, try JPEG
-      photoImage = await pdfDoc.embedJpg(photoArrayBuffer);
-    }
-
-    // Calculate photo dimensions (max height 100)
-    const photoMaxHeight = 100;
-    const photoAspectRatio = photoImage.width / photoImage.height;
-    const photoHeight = photoMaxHeight;
-    const photoWidth = photoHeight * photoAspectRatio;
-
-    // Draw the photo on the right side
-    const photoX = page.getWidth() - margin - photoWidth;
-    page.drawImage(photoImage, {
-      x: photoX,
-      y: y - photoHeight + 30, // Align with name
-      width: photoWidth,
-      height: photoHeight,
-    });
-
     // Add personal info from stats
-    page.drawText(statsData.name, {
+    page.drawText(resumeData.stats.name, {
       x: margin,
       y,
       size: 24,
@@ -64,7 +32,7 @@ export async function GET() {
     y -= 20;
 
     // Add title
-    page.drawText(statsData.title, {
+    page.drawText(resumeData.stats.title, {
       x: margin,
       y,
       size: 12,
@@ -75,7 +43,51 @@ export async function GET() {
     y -= 15;
 
     // Add contact email
-    page.drawText(statsData.contactEmail, {
+    page.drawText(resumeData.stats.contactEmail, {
+      x: margin,
+      y,
+      size: 12,
+      font: font,
+      color: rgb(0, 0, 0), // Black text
+    });
+
+    y -= 15;
+
+    // Add address
+    page.drawText(resumeData.stats.address, {
+      x: margin,
+      y,
+      size: 12,
+      font: font,
+      color: rgb(0, 0, 0), // Black text
+    });
+
+    y -= 15;
+
+    // Add phone number
+    page.drawText(resumeData.stats.phoneNumber, {
+      x: margin,
+      y,
+      size: 12,
+      font: font,
+      color: rgb(0, 0, 0), // Black text
+    });
+
+    y -= 15;
+
+    // Add LinkedIn
+    page.drawText(`LinkedIn: ${resumeData.stats.linkedin}`, {
+      x: margin,
+      y,
+      size: 12,
+      font: font,
+      color: rgb(0, 0, 0), // Black text
+    });
+
+    y -= 15;
+
+    // Add GitHub
+    page.drawText(`GitHub: ${resumeData.stats.github}`, {
       x: margin,
       y,
       size: 12,
@@ -84,6 +96,77 @@ export async function GET() {
     });
 
     y -= 40;
+
+    // Add achievements section if available
+    if (resumeData.achievements && resumeData.achievements.length > 0) {
+      page.drawText('Achievements', {
+        x: margin,
+        y,
+        size: 16,
+        font: boldFont,
+        color: rgb(0, 0, 0), // Black text
+      });
+
+      y -= 20;
+
+      resumeData.achievements.forEach((achievement) => {
+        // Check if we need a new page
+        if (y < 150) {
+          page = pdfDoc.addPage([595.28, 841.89]);
+          y = 800;
+        }
+
+        // Achievement title
+        page.drawText(achievement.title, {
+          x: margin,
+          y,
+          size: 12,
+          font: boldFont,
+          color: rgb(0, 0, 0), // Black text
+        });
+
+        y -= 15;
+
+        // Achievement description
+        page.drawText(achievement.description, {
+          x: margin,
+          y,
+          size: 10,
+          font: font,
+          color: rgb(0, 0, 0), // Black text
+        });
+
+        y -= 15;
+
+        // Achievement URL if available
+        if (achievement.url) {
+          page.drawText(`URL: ${achievement.url}`, {
+            x: margin,
+            y,
+            size: 9,
+            font: font,
+            color: rgb(0, 0, 0), // Black text
+          });
+          y -= 15;
+        }
+
+        // Achievement year if available
+        if (achievement.year) {
+          page.drawText(`Year: ${achievement.year}`, {
+            x: margin,
+            y,
+            size: 9,
+            font: font,
+            color: rgb(0, 0, 0), // Black text
+          });
+          y -= 15;
+        }
+
+        y -= 10; // Extra space between achievements
+      });
+
+      y -= 20; // Space after achievements section
+    }
 
     // Add skills section
     page.drawText('Skills & Expertise', {
@@ -97,7 +180,13 @@ export async function GET() {
     y -= 20;
 
     // Process skills
-    Object.entries(skillsData).forEach(([category, skills]) => {
+    Object.entries(resumeData.skills).forEach(([category, skills]) => {
+      // Check if we need a new page
+      if (y < 150) {
+        page = pdfDoc.addPage([595.28, 841.89]);
+        y = 800;
+      }
+
       // Draw category
       page.drawText(category, {
         x: margin,
@@ -109,8 +198,8 @@ export async function GET() {
 
       y -= 15;
 
-      // Draw skills (comma-separated)
-      const skillsText = skills.join(', ');
+      // Draw skills with years of experience
+      const skillsText = skills.map(item => `${item.skill} (${item.yearsExperience}yr)`).join(', ');
 
       // Handle text wrapping for skills
       const words = skillsText.split(', ');
@@ -161,7 +250,7 @@ export async function GET() {
     y -= 20;
 
     // Sort companies by 'from' year in descending order
-    const sortedCompanies = [...resumeData].sort((a, b) => {
+    const sortedCompanies = [...resumeData.workExperience].sort((a, b) => {
       const yearA = parseInt(a.from);
       const yearB = parseInt(b.from);
       return yearB - yearA;
@@ -222,11 +311,11 @@ export async function GET() {
     });
 
     // Add reviews section if there's space
-    if (y > 200) {
+    if (y > 200 && resumeData.reviews && resumeData.reviews.length > 0) {
       y -= 10;
 
       // Filter reviews with at least 200 characters
-      const filteredReviews = reviewsData.filter(review =>
+      const filteredReviews = resumeData.reviews.filter(review =>
         review.content && review.content.length >= 200
       );
 
@@ -277,6 +366,62 @@ export async function GET() {
           y -= 25;
         });
       }
+    }
+
+    // Add education section
+    if (resumeData.education && resumeData.education.length > 0) {
+      y -= 10;
+
+      page.drawText('Education', {
+        x: margin,
+        y,
+        size: 16,
+        font: boldFont,
+        color: rgb(0, 0, 0), // Black text
+      });
+
+      y -= 20;
+
+      resumeData.education.forEach((edu) => {
+        // Check if we need a new page
+        if (y < 150) {
+          page = pdfDoc.addPage([595.28, 841.89]);
+          y = 800;
+        }
+
+        // Institution and degree
+        page.drawText(`${edu.institution} (${edu.from} - ${edu.to})`, {
+          x: margin,
+          y,
+          size: 12,
+          font: boldFont,
+          color: rgb(0, 0, 0), // Black text
+        });
+
+        y -= 15;
+
+        // Degree details
+        page.drawText(`${edu.degree}${edu.minor ? `, Minor in ${edu.minor}` : ''}`, {
+          x: margin,
+          y,
+          size: 11,
+          font: font,
+          color: rgb(0, 0, 0), // Black text
+        });
+
+        if (edu.gpa) {
+          y -= 15;
+          page.drawText(`GPA: ${edu.gpa}`, {
+            x: margin,
+            y,
+            size: 10,
+            font: font,
+            color: rgb(0, 0, 0), // Black text
+          });
+        }
+
+        y -= 20;
+      });
     }
 
     // Add footer with website URL

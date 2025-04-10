@@ -90,12 +90,11 @@ export default function Home() {
           <Pill href="/companies-ive-worked-for/upperdeck" color="purple">UpperDeck</Pill>
           <Pill href="/companies-ive-worked-for/callaway-golf" color="teal">Callaway Golf</Pill>
           <Pill Pill href="/companies-ive-worked-for/geico" color="orange">GEICO</Pill>
-          <Pill Pill href="/companies-ive-worked-for/x" color="green">X</Pill>
           <Pill Pill href="/companies-ive-worked-for/youtube" color="purple">YouTube</Pill>
           <Pill Pill href="/companies-ive-worked-for/uber" color="teal">Uber</Pill>
           <Pill Pill href="/companies-ive-worked-for/codementor" color="orange">CodeMentor</Pill>
           <Pill Pill href="/companies-ive-worked-for/devmentor-live" color="green">DevmentorLive</Pill>
-          < Pill href="/companies-ive-worked-for/zooly-ai" color="purple">ZoolyAI</Pill>
+          < Pill href="/companies-ive-worked-for/voxbird-ai" color="purple">VoxBirdAI</Pill>
         </div >
 
 

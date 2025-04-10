@@ -22,12 +22,27 @@ export default function ResumeNavigation() {
           Skills
         </a>
         <a
+          href="#achievements"
+          onClick={(e) => smoothScroll(e, 'achievements')}
+          className="text-blue-400 hover:text-blue-300 transition-colors px-2 sm:px-3 py-1 rounded-md hover:bg-blue-900/20 whitespace-nowrap"
+        >
+          Achievements
+        </a>
+        <a
+          href="#education"
+          onClick={(e) => smoothScroll(e, 'education')}
+          className="text-blue-400 hover:text-blue-300 transition-colors px-2 sm:px-3 py-1 rounded-md hover:bg-blue-900/20 whitespace-nowrap"
+        >
+          Education
+        </a>
+        <a
           href="#employment"
           onClick={(e) => smoothScroll(e, 'employment')}
           className="text-blue-400 hover:text-blue-300 transition-colors px-2 sm:px-3 py-1 rounded-md hover:bg-blue-900/20 whitespace-nowrap"
         >
           Employment
         </a>
+
         <a
           href="#testimonials"
           onClick={(e) => smoothScroll(e, 'testimonials')}
